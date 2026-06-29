@@ -285,7 +285,7 @@ svg#lines{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:n
   <button class="tbtn" onclick="copyBoard()">⧉ 複製</button>
   <button class="tbtn dan" onclick="clearBoard()">🗑 清除</button>
   <div class="sep"></div>
-  <button class="tbtn pri" onclick="exportMD()" title="儲存整個白板為可再次編輯的HTML">💾 儲存白板</button>
+  <button class="tbtn pri" onclick="saveToGitHub()" title="儲存並同步到雲端">☁️ 儲存白板</button>
 </div>
 
 <!-- Toolbar row 2: Drawing tools -->
@@ -2453,7 +2453,6 @@ function clearBoard(){
 
 // ════════════ EXPORT ════════════
 function exportMD(){
-  // Save entire whiteboard as self-contained editable HTML
   const date=new Date().toISOString().slice(0,10);
   const html=document.documentElement.outerHTML;
   const blob=new Blob([html],{type:'text/html;charset=utf-8'});
@@ -2461,6 +2460,43 @@ function exportMD(){
   a.href=URL.createObjectURL(blob);
   a.download='Rose_工作後台_'+date+'.html';
   a.click();
+}
+
+async function saveToGitHub(){
+  const GITHUB_TOKEN='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';
+  const REPO='Ghjasmine/jasmine';
+  const FILE='index.html';
+  const btn=document.querySelector('[onclick="saveToGitHub()"]');
+  const orig=btn.textContent;
+  btn.textContent='⏳ 儲存中...';
+  btn.disabled=true;
+  try{
+    // 取得目前檔案的SHA
+    const metaRes=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{
+      headers:{'Authorization':'token '+GITHUB_TOKEN,'Accept':'application/vnd.github.v3+json'}
+    });
+    const meta=await metaRes.json();
+    const sha=meta.sha;
+    // 取得目前HTML內容
+    const html=document.documentElement.outerHTML;
+    const encoded=btoa(unescape(encodeURIComponent(html)));
+    // 推送到GitHub
+    const res=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{
+      method:'PUT',
+      headers:{'Authorization':'token '+GITHUB_TOKEN,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'update whiteboard '+new Date().toISOString().slice(0,16),content:encoded,sha:sha})
+    });
+    if(res.ok){
+      btn.textContent='✅ 已儲存';
+      setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);
+    } else {
+      throw new Error('GitHub API error');
+    }
+  } catch(e){
+    btn.textContent='❌ 失敗';
+    setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);
+    console.error(e);
+  }
 }
 
 // ════════════ SHAPES (free-draw lines/arrows) ════════════
