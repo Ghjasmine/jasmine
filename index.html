@@ -2463,12 +2463,14 @@ function exportMD(){
 }
 
 async function saveToGitHub(){
-  const t1='ghp_uGCSH7QFS2Drh';
-  const t2='f1FTxCt7ltvLqYx';
-  const t3='5w2sXo2j';
-  const tk=t1+t2+t3;
   const REPO='Ghjasmine/jasmine';
   const FILE='index.html';
+  let tk=localStorage.getItem('gh_tk');
+  if(!tk){
+    tk=prompt('請輸入你的 GitHub Token（只需輸入一次，會記在這台電腦）：');
+    if(!tk) return;
+    localStorage.setItem('gh_tk',tk);
+  }
   const btn=document.querySelector('[onclick="saveToGitHub()"]');
   const orig=btn.textContent;
   btn.textContent='⏳ 儲存中...';
@@ -2477,6 +2479,10 @@ async function saveToGitHub(){
     const metaRes=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{
       headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}
     });
+    if(metaRes.status===401){
+      localStorage.removeItem('gh_tk');
+      throw new Error('Token 無效，請重新輸入');
+    }
     const meta=await metaRes.json();
     const sha=meta.sha;
     const html=document.documentElement.outerHTML;
@@ -2494,6 +2500,7 @@ async function saveToGitHub(){
     }
   } catch(e){
     btn.textContent='❌ 失敗';
+    alert(e.message);
     setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
     console.error(e);
   }
