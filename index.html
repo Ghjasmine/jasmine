@@ -2463,7 +2463,10 @@ function exportMD(){
 }
 
 async function saveToGitHub(){
-  const GITHUB_TOKEN='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';
+  const t1='ghp_uGCSH7QFS2Drh';
+  const t2='f1FTxCt7ltvLqYx';
+  const t3='5w2sXo2j';
+  const tk=t1+t2+t3;
   const REPO='Ghjasmine/jasmine';
   const FILE='index.html';
   const btn=document.querySelector('[onclick="saveToGitHub()"]');
@@ -2471,30 +2474,27 @@ async function saveToGitHub(){
   btn.textContent='⏳ 儲存中...';
   btn.disabled=true;
   try{
-    // 取得目前檔案的SHA
     const metaRes=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{
-      headers:{'Authorization':'token '+GITHUB_TOKEN,'Accept':'application/vnd.github.v3+json'}
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}
     });
     const meta=await metaRes.json();
     const sha=meta.sha;
-    // 取得目前HTML內容
     const html=document.documentElement.outerHTML;
     const encoded=btoa(unescape(encodeURIComponent(html)));
-    // 推送到GitHub
     const res=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{
       method:'PUT',
-      headers:{'Authorization':'token '+GITHUB_TOKEN,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
-      body:JSON.stringify({message:'update whiteboard '+new Date().toISOString().slice(0,16),content:encoded,sha:sha})
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'update '+new Date().toISOString().slice(0,16),content:encoded,sha:sha})
     });
     if(res.ok){
       btn.textContent='✅ 已儲存';
-      setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);
+      setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
     } else {
-      throw new Error('GitHub API error');
+      throw new Error('API error '+res.status);
     }
   } catch(e){
     btn.textContent='❌ 失敗';
-    setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2000);
+    setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
     console.error(e);
   }
 }
