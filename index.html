@@ -246,7 +246,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <div id="board-tabs"><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782979275157',this.textContent.trim())" onclick="switchBoard('b1782979275157')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782979275157')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
   <div class="tsep"></div>
   <button class="tbtn" onclick="zoomIn()">＋</button>
-  <span id="zdsp">62%</span>
+  <span id="zdsp">72%</span>
   <button class="tbtn" onclick="zoomOut()">－</button>
   <button class="tbtn" onclick="resetView()">↺</button>
   <div class="tsep"></div>
@@ -278,54 +278,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 </div>
 
 <div id="vp" style="">
-  <div id="world" style="transform: translate(368.002px, 170.325px) scale(0.624387);"><svg id="lines"><defs><marker id="mk-2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk-1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mk-c05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M5.97175411240827,143.29059999999998 Q77.237871047215,208.88562983911595 148.50398798202173,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l40" style="cursor: pointer;"></path><path d="M90.307758546061,143.29059999999998 Q270.36199999999997,171.6453 450.416241453939,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l41" style="cursor: pointer;"></path><path d="M115.72399999999999,124.64291968573771 Q467.86199999999997,184.11585998571536 820,403.58880028569297" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l42" style="cursor: pointer;"></path><path d="M-11.113294565895451,143.29059999999998 Q83.5459797425715,294.84973541491985 178.20525405103845,560" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l43" style="cursor: pointer;"></path><path d="M225,766 Q225,763 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l51" style="cursor: pointer;"></path><path d="M217.63779527559055,947 Q217.1259842519685,953.1929133858267 216.61417322834646,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l52" style="cursor: pointer;"></path><path d="M390,939.6164383561644 Q415,937.6643835616438 440,965.7123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l53" style="cursor: pointer;"></path><path d="M390,895.6912751677852 Q605,870.6677852348994 820,1005.6442953020135" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mk-c05a10)" data-lid="l54" style="cursor: pointer;"></path></svg><div class="card peter" id="c44" data-base="peter" data-status="peter" style="left: -214.276px; top: -24.7094px; width: 330px; z-index: 105;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c44','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c44','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c44','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c44','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c44')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 0-1</span>
-      
-      <button class="card-del" onclick="removeCard('c44')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c44">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="⚙️ Phase 0-1｜工具裝好 + Workspace 建好">⚙️ Phase 0-1｜工具裝好 + Workspace 建好</textarea>
-      </div>
-      <div class="card-content" id="cc-c44"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：30分鐘 + 2小時"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c44')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c44')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c45" data-base="peter" data-status="peter" style="left: 60px; top: 360px; width: 300px; z-index: 153;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c45','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c45','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c45','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c45','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c45')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Step 1</span>
-      
-      <button class="card-del" onclick="removeCard('c45')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c45">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💻 安裝 Claude Desktop">💻 安裝 Claude Desktop</textarea>
-      </div>
-      <div class="card-content" id="cc-c45"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 77px;" data-val="1. https://claude.ai/download
-2. 選作業系統安裝
-3. 登入帳號
-4. Settings→Features→啟用 Cowork"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c45')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c45')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c46" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 154;">
+  <div id="world" style="transform: translate(348.2px, 208.6px) scale(0.715);"><svg id="lines"><defs><marker id="mk-2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk-1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mk-c05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M225,766 Q225,763 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l51" style="cursor: pointer;"></path><path d="M217.63779527559055,947 Q217.1259842519685,953.1929133858267 216.61417322834646,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l52" style="cursor: pointer;"></path><path d="M390,939.6164383561644 Q415,937.6643835616438 440,965.7123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l53" style="cursor: pointer;"></path><path d="M390,895.6912751677852 Q605,870.6677852348994 820,1005.6442953020135" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mk-c05a10)" data-lid="l54" style="cursor: pointer;"></path></svg><div class="card peter" id="c46" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 107;">
     <div class="conn-port port-t" onmousedown="portDown(event,'c46','t')"></div>
     <div class="conn-port port-b" onmousedown="portDown(event,'c46','b')"></div>
     <div class="conn-port port-l" onmousedown="portDown(event,'c46','l')"></div>
@@ -400,7 +353,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
     </div>
     <div class="rh" onmousedown="rhDown(event,'c48')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c50" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 158;">
+    </div></div><div class="card peter" id="c50" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 105;">
     <div class="conn-port port-t" onmousedown="portDown(event,'c50','t')"></div>
     <div class="conn-port port-b" onmousedown="portDown(event,'c50','b')"></div>
     <div class="conn-port port-l" onmousedown="portDown(event,'c50','l')"></div>
@@ -420,7 +373,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 標題：心理安全感是AI時代最重要的競爭力
 日期：2026-06-17
 來源：Podcast
-主題標籤：#心理安全感 #AI時代
+主題標籤：#心理安全感 #AI代
 出書潛力：★★★★
 課程潛力：★★★★★
 ---"></textarea></div>
@@ -453,7 +406,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
     </div>
     <div class="rh" onmousedown="rhDown(event,'c51')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c52" data-base="wip" data-status="wip" style="left: 440px; top: 560px; width: 330px; z-index: 160;">
+    </div></div><div class="card wip" id="c52" data-base="wip" data-status="wip" style="left: 438.601px; top: 561.399px; width: 330px; z-index: 104;">
     <div class="conn-port port-t" onmousedown="portDown(event,'c52','t')"></div>
     <div class="conn-port port-b" onmousedown="portDown(event,'c52','b')"></div>
     <div class="conn-port port-l" onmousedown="portDown(event,'c52','l')"></div>
@@ -476,37 +429,6 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
       </div>
     </div>
     <div class="rh" onmousedown="rhDown(event,'c52')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c54" data-base="done" data-status="done" style="left: 820px; top: 360px; width: 300px; z-index: 162;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c54','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c54','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c54','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c54','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c54')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ 價值卡</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c54')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c54">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💎 Rose 價值卡（已建立）">💎 Rose 價值卡（已建立）</textarea>
-      </div>
-      <div class="card-content" id="cc-c54"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 192px;" data-val="VC-01 勇氣不是不害怕
-VC-02 沉默沒讓任何人獲利
-VC-03 不是框架限制你
-VC-04 一個團隊最可怕的
-VC-05 主管最重要的角色
-VC-06 AI時代最稀缺的
-VC-07 愛是你最大的競爭力
-VC-08 沉默的共犯
-VC-09 錯誤是學費還是罰款
-VC-10 成功不是一個地點"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c54')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c54')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
     </div></div><div class="card done" id="c56" data-base="done" data-status="done" style="left: 60px; top: 760px; width: 330px; z-index: 164;">
     <div class="conn-port port-t" onmousedown="portDown(event,'c56','t')"></div>
