@@ -246,7 +246,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <span class="logo">✦</span>
   <span id="site-title" contenteditable="true" spellcheck="false">Rose 工作後台</span>
   <div class="tsep"></div>
-  <div id="board-tabs"><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782979275157',this.textContent.trim())" onclick="switchBoard('b1782979275157')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782979275157')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782985502298',this.textContent.trim())" onclick="switchBoard('b1782985502298')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782985502298')">×</span></div><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782986555949',this.textContent.trim())" onclick="switchBoard('b1782986555949')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782986555949')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
+  <div id="board-tabs"><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782979275157',this.textContent.trim())" onclick="switchBoard('b1782979275157')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782979275157')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782985502298',this.textContent.trim())" onclick="switchBoard('b1782985502298')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782985502298')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782986555949',this.textContent.trim())" onclick="switchBoard('b1782986555949')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782986555949')">×</span></div><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782986645224',this.textContent.trim())" onclick="switchBoard('b1782986645224')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782986645224')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
   <div class="tsep"></div>
   <button class="tbtn" onclick="zoomIn()">＋</button>
   <span id="zdsp">65%</span>
@@ -258,7 +258,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 
 <div id="symbar">
   <button class="sbtn active" id="conn-btn" onclick="toggleConnMode()" title="點卡片→點另一張卡片連線">⟶ 連線</button>
-  <span id="conn-hint" style="display: inline;">點第一張卡片</span>
+  <span id="conn-hint">點第一張卡片</span>
   <div class="ssep"></div>
   <span style="font-size:11px;color:var(--muted);">線色</span>
   <div class="lc-dot active-lc" style="background:#1a2f5e;" data-c="#1a2f5e" onclick="setLC(this)" title="深藍"></div>
@@ -281,18 +281,18 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 </div>
 
 <div id="vp">
-  <div id="world" style="transform: translate(80px, 60px) scale(0.65);"><svg id="lines"><defs><marker id="mk2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mkc05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M630,162.5769230769231 Q510,111.29487179487182 390,204.01282051282053" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533906" style="cursor: pointer;"></path><path d="M220.24070021881838,305 Q218.43544857768052,331.41684901531727 216.63019693654266,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533907" style="cursor: pointer;"></path><path d="M351.3126491646778,305 Q399.2243436754177,303.7529832935561 447.1360381861575,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533908" style="cursor: pointer;"></path><path d="M390,285.21140939597313 Q605,273.8959731543624 820,422.58053691275165" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533909" style="cursor: pointer;"></path><path d="M225,305 Q225,432.5 225,560" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986533910" style="cursor: pointer;"></path><path d="M640.2488687782806,223 Q698.6877828054298,156.4366515837104 757.1266968325792,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533911" style="cursor: pointer;"></path><path d="M605,324 Q605,342 605,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533912" style="cursor: pointer;"></path><path d="M754.65,324 Q787.5,322.28999999999996 820.35,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533913" style="cursor: pointer;"></path><path d="M605,324 Q605,442 605,560" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782986533914" style="cursor: pointer;"></path><path d="M968.5396039603961,223 Q913.960396039604,158.75247524752473 859.3811881188119,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533915" style="cursor: pointer;"></path><path d="M981.1975524475524,305 Q979.7552447552448,331.6346153846154 978.3129370629371,360" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986533916" style="cursor: pointer;"></path><path d="M990,167.33783783783784 Q1095,125.24324324324323 1200,209.14864864864865" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986533917" style="cursor: pointer;"></path><path d="M225,781 Q225,770.5 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986533918" style="cursor: pointer;"></path><path d="M217.04724409448818,962 Q217.1259842519685,960.9527559055118 217.20472440944883,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986533919" style="cursor: pointer;"></path><path d="M390,947.1164383561644 Q415,945.1643835616438 440,973.2123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986533920" style="cursor: pointer;"></path><path d="M390,901.0872483221476 Q605,873.3221476510066 820,1005.5570469798657" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782986533921" style="cursor: pointer;"></path></svg><div class="card header" id="c1782986533906" data-base="header" data-status="header" style="left: 630px; top: 40px; width: 360px; z-index: 103;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533906','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533906','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533906','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533906','r')"></div>
+  <div id="world" style="transform: translate(80px, 60px) scale(0.65);"><svg id="lines"><defs><marker id="mk2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mkc05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M630,162.5769230769231 Q510,111.29487179487182 390,204.01282051282053" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584447" style="cursor: pointer;"></path><path d="M220.24070021881838,305 Q218.43544857768052,331.41684901531727 216.63019693654266,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584448" style="cursor: pointer;"></path><path d="M351.3126491646778,305 Q399.2243436754177,303.7529832935561 447.1360381861575,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584449" style="cursor: pointer;"></path><path d="M390,285.21140939597313 Q605,273.8959731543624 820,422.58053691275165" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584450" style="cursor: pointer;"></path><path d="M225,305 Q225,432.5 225,560" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986584451" style="cursor: pointer;"></path><path d="M640.2488687782806,223 Q698.6877828054298,156.4366515837104 757.1266968325792,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584452" style="cursor: pointer;"></path><path d="M605,324 Q605,342 605,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584453" style="cursor: pointer;"></path><path d="M754.65,324 Q787.5,322.28999999999996 820.35,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584454" style="cursor: pointer;"></path><path d="M605,324 Q605,442 605,560" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782986584455" style="cursor: pointer;"></path><path d="M968.5396039603961,223 Q913.960396039604,158.75247524752473 859.3811881188119,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584456" style="cursor: pointer;"></path><path d="M981.1975524475524,305 Q979.7552447552448,331.6346153846154 978.3129370629371,360" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986584457" style="cursor: pointer;"></path><path d="M990,167.33783783783784 Q1095,125.24324324324323 1200,209.14864864864865" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782986584458" style="cursor: pointer;"></path><path d="M225,781 Q225,770.5 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986584459" style="cursor: pointer;"></path><path d="M217.04724409448818,962 Q217.1259842519685,960.9527559055118 217.20472440944883,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986584460" style="cursor: pointer;"></path><path d="M390,947.1164383561644 Q415,945.1643835616438 440,973.2123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782986584461" style="cursor: pointer;"></path><path d="M390,901.0872483221476 Q605,873.3221476510066 820,1005.5570469798657" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782986584462" style="cursor: pointer;"></path></svg><div class="card header" id="c1782986584447" data-base="header" data-status="header" style="left: 630px; top: 40px; width: 360px; z-index: 101;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584447','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584447','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584447','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584447','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533906')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584447')" title="折疊/展開">﹀</button>
       <span class="card-badge">ROOT</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533906')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584447')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533906">
+    <div class="card-body-wrap" id="cbw-c1782986584447">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="Rose 內容後台">Rose 內容後台</textarea>
       <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="Jasmine 協助建立的完整內容管理系統
 
@@ -300,45 +300,45 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 
 淡藍=Peter架構 ✅=已完成 🔶=進行中 ⬜=未開始</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533906')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584447')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533906')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584447')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533907" data-base="peter" data-status="peter" style="left: 60px; top: 160px; width: 330px; z-index: 104;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533907','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533907','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533907','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533907','r')"></div>
+    </div></div><div class="card peter" id="c1782986584448" data-base="peter" data-status="peter" style="left: 60px; top: 160px; width: 330px; z-index: 102;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584448','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584448','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584448','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584448','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533907')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584448')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 0-1</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533907')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584448')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533907">
+    <div class="card-body-wrap" id="cbw-c1782986584448">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="⚙️ Phase 0-1｜工具裝好 + Workspace 建好">⚙️ Phase 0-1｜工具裝好 + Workspace 建好</textarea>
       <textarea class="card-body-el" rows="2" placeholder="輸入內容（/ 插入標題）" style="height: 38px;" data-val="時間：30分鐘 + 2小時">時間：30分鐘 + 2小時</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533907')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584448')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533907')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584448')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533908" data-base="peter" data-status="peter" style="left: 60px; top: 360px; width: 300px; z-index: 105;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533908','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533908','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533908','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533908','r')"></div>
+    </div></div><div class="card peter" id="c1782986584449" data-base="peter" data-status="peter" style="left: 60px; top: 360px; width: 300px; z-index: 103;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584449','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584449','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584449','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584449','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533908')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584449')" title="折疊/展開">﹀</button>
       <span class="card-badge">Step 1</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533908')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584449')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533908">
+    <div class="card-body-wrap" id="cbw-c1782986584449">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💻 安裝 Claude Desktop">💻 安裝 Claude Desktop</textarea>
       <textarea class="card-body-el" rows="5" placeholder="輸入內容（/ 插入標題）" style="height: 96px;" data-val="1. https://claude.ai/download
 2. 選作業系統安裝
@@ -348,47 +348,47 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 3. 登入帳號
 4. Settings→Features→啟用 Cowork</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533908')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584449')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533908')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584449')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533909" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 106;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533909','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533909','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533909','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533909','r')"></div>
+    </div></div><div class="card peter" id="c1782986584450" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 104;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584450','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584450','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584450','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584450','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533909')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584450')" title="折疊/展開">﹀</button>
       <span class="card-badge">Step 2</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533909')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584450')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533909">
+    <div class="card-body-wrap" id="cbw-c1782986584450">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 選工作資料夾">📁 選工作資料夾</textarea>
       <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="Cowork詢問「選擇一個資料夾」
 → 選Rose的知識庫資料夾">Cowork詢問「選擇一個資料夾」
 → 選Rose的知識庫資料夾</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533909')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584450')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533909')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584450')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533910" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 107;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533910','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533910','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533910','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533910','r')"></div>
+    </div></div><div class="card peter" id="c1782986584451" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 105;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584451','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584451','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584451','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584451','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533910')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584451')" title="折疊/展開">﹀</button>
       <span class="card-badge">Step 3</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533910')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584451')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533910">
+    <div class="card-body-wrap" id="cbw-c1782986584451">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗣 第一句話：讓AI認識Rose">🗣 第一句話：讓AI認識Rose</textarea>
       <textarea class="card-body-el" rows="6" placeholder="輸入內容（/ 插入標題）" style="height: 115px;" data-val="貼給AI的自介MD：
 你好，我是Rose，資深企業領導者。
@@ -400,24 +400,24 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 媒體專欄80+篇、專訪40+篇。
 核心主題：數位轉型/領導力/女性領導</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533910')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584451')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533910')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584451')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c1782986533911" data-base="done" data-status="done" style="left: 60px; top: 560px; width: 330px; z-index: 108;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533911','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533911','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533911','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533911','r')"></div>
+    </div></div><div class="card done" id="c1782986584452" data-base="done" data-status="done" style="left: 60px; top: 560px; width: 330px; z-index: 106;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584452','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584452','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584452','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584452','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533911')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584452')" title="折疊/展開">﹀</button>
       <span class="card-badge">✅ Phase 0-1</span>
       <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c1782986533911')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584452')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533911">
+    <div class="card-body-wrap" id="cbw-c1782986584452">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="✅ Phase 0-1 已完成">✅ Phase 0-1 已完成</textarea>
       <textarea class="card-body-el" rows="6" placeholder="輸入內容（/ 插入標題）" style="height: 115px;" data-val="• Claude Desktop 已安裝，Cowork已啟用
 • 工作資料夾已選定（Rose_Content）
@@ -429,47 +429,47 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 • CLAUDE.md v0 已建立
 • 資料夾結構已建好</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533911')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584452')">📝 編輯</button>
         <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533911')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584452')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533912" data-base="peter" data-status="peter" style="left: 440px; top: 160px; width: 330px; z-index: 109;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533912','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533912','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533912','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533912','r')"></div>
+    </div></div><div class="card peter" id="c1782986584453" data-base="peter" data-status="peter" style="left: 440px; top: 160px; width: 330px; z-index: 107;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584453','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584453','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584453','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584453','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533912')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584453')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 2</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533912')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584453')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533912">
+    <div class="card-body-wrap" id="cbw-c1782986584453">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📥 Phase 2｜內容入庫">📥 Phase 2｜內容入庫</textarea>
       <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="時間：1-2週
 完成後：200+篇可搜尋可追蹤">時間：1-2週
 完成後：200+篇可搜尋可追蹤</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533912')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584453')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533912')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584453')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533913" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 110;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533913','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533913','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533913','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533913','r')"></div>
+    </div></div><div class="card peter" id="c1782986584454" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 108;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584454','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584454','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584454','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584454','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533913')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584454')" title="折疊/展開">﹀</button>
       <span class="card-badge">素材卡</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533913')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584454')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533913">
+    <div class="card-body-wrap" id="cbw-c1782986584454">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🃏 _card.md 格式">🃏 _card.md 格式</textarea>
       <textarea class="card-body-el" rows="10" placeholder="輸入內容（/ 插入標題）" style="height: 192px;" data-val="---
 編號：SPE-008
@@ -489,47 +489,47 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 課程潛力：★★★★★
 ---</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533913')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584454')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533913')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584454')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533914" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 111;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533914','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533914','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533914','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533914','r')"></div>
+    </div></div><div class="card peter" id="c1782986584455" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 109;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584455','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584455','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584455','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584455','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533914')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584455')" title="折疊/展開">﹀</button>
       <span class="card-badge">ContentIndex</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533914')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584455')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533914">
+    <div class="card-body-wrap" id="cbw-c1782986584455">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📊 ContentIndex.md（總索引）">📊 ContentIndex.md（總索引）</textarea>
       <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="所有素材的狀態追蹤總表。
 整個系統的神經中樞。">所有素材的狀態追蹤總表。
 整個系統的神經中樞。</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533914')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584455')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533914')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584455')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c1782986533915" data-base="wip" data-status="wip" style="left: 440px; top: 560px; width: 330px; z-index: 112;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533915','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533915','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533915','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533915','r')"></div>
+    </div></div><div class="card wip" id="c1782986584456" data-base="wip" data-status="wip" style="left: 440px; top: 560px; width: 330px; z-index: 110;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584456','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584456','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584456','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584456','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533915')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584456')" title="折疊/展開">﹀</button>
       <span class="card-badge">🔶 Phase 2</span>
       <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
-      <button class="card-del" onclick="removeCard('c1782986533915')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584456')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533915">
+    <div class="card-body-wrap" id="cbw-c1782986584456">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔶 Phase 2 進行中">🔶 Phase 2 進行中</textarea>
       <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="✅ Podcast全部建卡（SPE-007、SPE-008）
 🔶 當前素材卡數量建立中
@@ -537,45 +537,45 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 🔶 當前素材卡數量建立中
 ⬜ ContentIndex.md 待下一步建立</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533915')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584456')">📝 編輯</button>
         <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">🔶 進行中</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533915')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584456')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533916" data-base="peter" data-status="peter" style="left: 820px; top: 160px; width: 330px; z-index: 113;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533916','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533916','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533916','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533916','r')"></div>
+    </div></div><div class="card peter" id="c1782986584457" data-base="peter" data-status="peter" style="left: 820px; top: 160px; width: 330px; z-index: 111;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584457','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584457','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584457','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584457','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533916')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584457')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 3</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533916')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584457')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533916">
+    <div class="card-body-wrap" id="cbw-c1782986584457">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔍 Phase 3｜深度分析">🔍 Phase 3｜深度分析</textarea>
       <textarea class="card-body-el" rows="2" placeholder="輸入內容（/ 插入標題）" style="height: 38px;" data-val="完成後：思想演進地圖、跨文章洞察">完成後：思想演進地圖、跨文章洞察</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533916')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584457')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533916')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584457')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c1782986533917" data-base="done" data-status="done" style="left: 820px; top: 360px; width: 300px; z-index: 114;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533917','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533917','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533917','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533917','r')"></div>
+    </div></div><div class="card done" id="c1782986584458" data-base="done" data-status="done" style="left: 820px; top: 360px; width: 300px; z-index: 112;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584458','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584458','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584458','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584458','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533917')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584458')" title="折疊/展開">﹀</button>
       <span class="card-badge">✅ 價值卡</span>
       <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c1782986533917')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584458')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533917">
+    <div class="card-body-wrap" id="cbw-c1782986584458">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💎 Rose 價值卡（已建立）">💎 Rose 價值卡（已建立）</textarea>
       <textarea class="card-body-el" rows="11" placeholder="輸入內容（/ 插入標題）" style="height: 211px;" data-val="VC-01 勇氣不是不害怕
 VC-02 沉默沒讓任何人獲利
@@ -597,47 +597,47 @@ VC-08 沉默的共犯
 VC-09 錯誤是學費還是罰款
 VC-10 成功不是一個地點</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533917')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584458')">📝 編輯</button>
         <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533917')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584458')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c1782986533918" data-base="peter" data-status="peter" style="left: 1200px; top: 160px; width: 330px; z-index: 115;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533918','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533918','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533918','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533918','r')"></div>
+    </div></div><div class="card peter" id="c1782986584459" data-base="peter" data-status="peter" style="left: 1200px; top: 160px; width: 330px; z-index: 113;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584459','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584459','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584459','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584459','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533918')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584459')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 4</span>
       
-      <button class="card-del" onclick="removeCard('c1782986533918')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584459')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533918">
+    <div class="card-body-wrap" id="cbw-c1782986584459">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📚 Phase 4｜策展出書">📚 Phase 4｜策展出書</textarea>
       <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="沒有Workspace → 3個月
 有Workspace → 3-6週">沒有Workspace → 3個月
 有Workspace → 3-6週</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533918')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584459')">📝 編輯</button>
         
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533918')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584459')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c1782986533919" data-base="done" data-status="done" style="left: 60px; top: 760px; width: 330px; z-index: 116;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533919','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533919','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533919','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533919','r')"></div>
+    </div></div><div class="card done" id="c1782986584460" data-base="done" data-status="done" style="left: 60px; top: 760px; width: 330px; z-index: 114;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584460','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584460','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584460','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584460','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533919')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584460')" title="折疊/展開">﹀</button>
       <span class="card-badge">✅ Root</span>
       <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c1782986533919')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584460')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533919">
+    <div class="card-body-wrap" id="cbw-c1782986584460">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 Rose 根目錄（已建好）">📁 Rose 根目錄（已建好）</textarea>
       <textarea class="card-body-el" rows="5" placeholder="輸入內容（/ 插入標題）" style="height: 96px;" data-val="Rose_Content/ ← 所有內容資產
 Rose_Business/ ← 商業行政
@@ -647,24 +647,24 @@ Rose_Business/ ← 商業行政
 Rose_Social/ ← 社群素材
 Rose_Admin/ ← 行政文件</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533919')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584460')">📝 編輯</button>
         <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533919')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584460')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c1782986533920" data-base="done" data-status="done" style="left: 60px; top: 960px; width: 300px; z-index: 117;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533920','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533920','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533920','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533920','r')"></div>
+    </div></div><div class="card done" id="c1782986584461" data-base="done" data-status="done" style="left: 60px; top: 960px; width: 300px; z-index: 115;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584461','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584461','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584461','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584461','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533920')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584461')" title="折疊/展開">﹀</button>
       <span class="card-badge">✅ 課程</span>
       <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c1782986533920')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584461')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533920">
+    <div class="card-body-wrap" id="cbw-c1782986584461">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎓 課程">🎓 課程</textarea>
       <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="兩條獨立產品線：
 • 天下線上課
@@ -672,24 +672,24 @@ Rose_Admin/ ← 行政文件</textarea>
 • 天下線上課
 • 愛盟實體課</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533920')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584461')">📝 編輯</button>
         <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533920')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584461')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c1782986533921" data-base="done" data-status="done" style="left: 440px; top: 960px; width: 300px; z-index: 118;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533921','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533921','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533921','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533921','r')"></div>
+    </div></div><div class="card done" id="c1782986584462" data-base="done" data-status="done" style="left: 440px; top: 960px; width: 300px; z-index: 116;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584462','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584462','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584462','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584462','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533921')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584462')" title="折疊/展開">﹀</button>
       <span class="card-badge">✅ Podcast</span>
       <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c1782986533921')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584462')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533921">
+    <div class="card-body-wrap" id="cbw-c1782986584462">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎙 Podcast（已完成整理）">🎙 Podcast（已完成整理）</textarea>
       <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="20+ 集，每集三件套：
 整理版.md + 文字稿.docx + 音檔
@@ -697,52 +697,52 @@ Rose_Admin/ ← 行政文件</textarea>
 整理版.md + 文字稿.docx + 音檔
 下一步：建素材卡（_card.md）</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533921')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584462')">📝 編輯</button>
         <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533921')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584462')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c1782986533922" data-base="wip" data-status="wip" style="left: 820px; top: 960px; width: 300px; z-index: 119;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986533922','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986533922','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986533922','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986533922','r')"></div>
+    </div></div><div class="card wip" id="c1782986584463" data-base="wip" data-status="wip" style="left: 820px; top: 960px; width: 300px; z-index: 117;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782986584463','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782986584463','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782986584463','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782986584463','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1782986533922')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782986584463')" title="折疊/展開">﹀</button>
       <span class="card-badge">🔶 Youtube</span>
       <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
-      <button class="card-del" onclick="removeCard('c1782986533922')">×</button>
+      <button class="card-del" onclick="removeCard('c1782986584463')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c1782986533922">
+    <div class="card-body-wrap" id="cbw-c1782986584463">
       <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="▶️ Youtube（整理中）">▶️ Youtube（整理中）</textarea>
       <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="歸檔補強中
 目標：對齊Podcast三件套格式">歸檔補強中
 目標：對齊Podcast三件套格式</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1782986533922')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782986584463')">📝 編輯</button>
         <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">🔶 進行中</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c1782986533922')">
+    <div class="rh" onmousedown="rhDown(event,'c1782986584463')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
     </div></div></div>
 </div>
 
-<div id="slash-menu" style="display: none;">
+<div id="slash-menu">
   <div class="slash-item" onclick="insertHeading(1)"><span class="si-label">H1</span><span>大標題</span></div>
   <div class="slash-item" onclick="insertHeading(2)"><span class="si-label">H2</span><span>次標題</span></div>
   <div class="slash-item" onclick="insertHeading(3)"><span class="si-label">H3</span><span>小標題</span></div>
 </div>
 
-<div id="ctx-menu" style="display: none;"></div>
-<div id="arrow-menu" style="display: none;"></div>
+<div id="ctx-menu"></div>
+<div id="arrow-menu"></div>
 
-<div id="ov" class="">
+<div id="ov">
   <div id="modal">
-    <h3 id="m-head">編輯：卡片</h3>
+    <h3 id="m-head">編輯卡片</h3>
     <div class="mf"><label>標題</label><input type="text" id="m-title"></div>
-    <div class="mf"><label>內容</label><textarea id="m-body" rows="8" data-val="i"></textarea></div>
+    <div class="mf"><label>內容</label><textarea id="m-body" rows="8" data-val=""></textarea></div>
     <div class="mf"><label>狀態</label>
       <select id="m-status">
         <option value="done">✅ 已完成</option>
