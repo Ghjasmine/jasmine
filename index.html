@@ -1,4 +1,6 @@
-<html lang="zh-TW"><head>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rose × Jasmine 工作後台</title>
@@ -243,19 +245,19 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <span class="logo">✦</span>
   <span id="site-title" contenteditable="true" spellcheck="false">Rose 工作後台</span>
   <div class="tsep"></div>
-  <div id="board-tabs"><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
+  <div id="board-tabs"></div>
   <div class="tsep"></div>
   <button class="tbtn" onclick="zoomIn()">＋</button>
   <span id="zdsp">65%</span>
   <button class="tbtn" onclick="zoomOut()">－</button>
   <button class="tbtn" onclick="resetView()">↺</button>
   <div class="tsep"></div>
-  <button class="tbtn pri" onclick="saveToGitHub()" disabled="">⏳ 儲存中...</button>
+  <button class="tbtn pri" onclick="saveToGitHub()">☁️ 儲存</button>
 </div>
 
 <div id="symbar">
-  <button class="sbtn" id="conn-btn" onclick="toggleConnMode()" title="點卡片→點另一張卡片連線">⟶ 連線</button>
-  <span id="conn-hint" style="display: none;">再點第二張卡片完成連線</span>
+  <button class="sbtn active" id="conn-btn" onclick="toggleConnMode()" title="點卡片→點另一張卡片連線">⟶ 連線</button>
+  <span id="conn-hint">點第一張卡片</span>
   <div class="ssep"></div>
   <span style="font-size:11px;color:var(--muted);">線色</span>
   <div class="lc-dot active-lc" style="background:#1a2f5e;" data-c="#1a2f5e" onclick="setLC(this)" title="深藍"></div>
@@ -268,7 +270,7 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <select id="txt-size-sel" style="font-size:11px;border:1px solid #dde3ef;border-radius:4px;padding:2px 4px;color:#1a2f5e;cursor:pointer;" title="字級">
     <option value="12">S</option>
     <option value="16">M</option>
-    <option value="20" selected="">L</option>
+    <option value="20" selected>L</option>
     <option value="28">XL</option>
     <option value="36">XXL</option>
   </select>
@@ -277,442 +279,27 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <span style="font-size:11px;color:var(--muted);">右鍵空白處 = 新增卡片</span>
 </div>
 
-<div id="vp" style="">
-  <div id="world" style="transform: translate(142px, 37px) scale(0.65);"><svg id="lines"><defs><marker id="mk-2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk-1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mk-c05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M630,162.92307692307693 Q510,115.53846153846155 390,212.15384615384616" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l22" style="cursor: pointer;"></path><path d="M218.84248210023867,332 Q217.8400954653938,345.3985680190931 216.83770883054893,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l23" style="cursor: pointer;"></path><path d="M381.95,332 Q410.975,330.4891095890411 440,363.8082191780822" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l24" style="cursor: pointer;"></path><path d="M390,294.503355704698 Q605,277.7046979865772 820,420.90604026845637" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l25" style="cursor: pointer;"></path><path d="M225,332 Q225,446 225,560" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l26" style="cursor: pointer;"></path><path d="M663.0833333333334,212 Q707.5,159.35000000000002 751.9166666666666,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l27" style="cursor: pointer;"></path><path d="M605,332 Q605,346 605,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l28" style="cursor: pointer;"></path><path d="M761.95,332 Q790.975,330.48910958904116 820,363.8082191780822" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l29" style="cursor: pointer;"></path><path d="M605,332 Q605,446 605,560" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mk-c05a10)" data-lid="l30" style="cursor: pointer;"></path><path d="M935.4166666666666,212 Q897.5,163.25000000000003 859.5833333333334,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l31" style="cursor: pointer;"></path><path d="M1060.3690794143322,332 Q1208.1411144141846,420.6155 1355.913149414037,669.231" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l32" style="cursor: pointer;"></path><path d="M990,164.9189189189189 Q1095,124.62162162162161 1200,210.32432432432432" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l33" style="cursor: pointer;"></path><path d="M225,770 Q225,765 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l34" style="cursor: pointer;"></path><path d="M217.48031496062993,951 Q217.1259842519685,955.2874015748032 216.77165354330708,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l35" style="cursor: pointer;"></path><path d="M390,941.6164383561644 Q415,939.6643835616438 440,967.7123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk-1a7a4a)" data-lid="l36" style="cursor: pointer;"></path><path d="M390,897.6912751677852 Q605,872.6677852348994 820,1007.6442953020135" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mk-c05a10)" data-lid="l37" style="cursor: pointer;"></path></svg><div class="card header" id="c23" data-base="header" data-status="header" style="left: 630px; top: 40px; width: 360px; z-index: 123;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c23','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c23','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c23','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c23','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c23')" title="折疊/展開">﹀</button>
-      <span class="card-badge">ROOT</span>
-      
-      <button class="card-del" onclick="removeCard('c23')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c23">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="Rose 內容後台">Rose 內容後台</textarea>
-      </div>
-      <div class="card-content" id="cc-c23"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="Jasmine 協助建立的完整內容管理系統
-
-淡藍=Peter架構 ✅=已完成 🔶=進行中 ⬜=未開始"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c23')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c23')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c24" data-base="peter" data-status="peter" style="left: 60px; top: 160px; width: 330px; z-index: 124;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c24','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c24','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c24','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c24','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c24')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 0-1</span>
-      
-      <button class="card-del" onclick="removeCard('c24')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c24">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="⚙️ Phase 0-1｜工具裝好 + Workspace 建好">⚙️ Phase 0-1｜工具裝好 + Workspace 建好</textarea>
-      </div>
-      <div class="card-content" id="cc-c24"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：30分鐘 + 2小時"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c24')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c24')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c25" data-base="peter" data-status="peter" style="left: 60px; top: 360px; width: 300px; z-index: 125;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c25','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c25','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c25','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c25','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c25')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Step 1</span>
-      
-      <button class="card-del" onclick="removeCard('c25')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c25">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💻 安裝 Claude Desktop">💻 安裝 Claude Desktop</textarea>
-      </div>
-      <div class="card-content" id="cc-c25"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 77px;" data-val="1. https://claude.ai/download
-2. 選作業系統安裝
-3. 登入帳號
-4. Settings→Features→啟用 Cowork"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c25')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c25')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c26" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 126;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c26','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c26','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c26','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c26','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c26')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Step 2</span>
-      
-      <button class="card-del" onclick="removeCard('c26')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c26">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 選工作資料夾">📁 選工作資料夾</textarea>
-      </div>
-      <div class="card-content" id="cc-c26"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="Cowork詢問「選擇一個資料夾」
-→ 選Rose的知識庫資料夾"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c26')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c26')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c27" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 127;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c27','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c27','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c27','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c27','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c27')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Step 3</span>
-      
-      <button class="card-del" onclick="removeCard('c27')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c27">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗣 第一句話：讓AI認識Rose">🗣 第一句話：讓AI認識Rose</textarea>
-      </div>
-      <div class="card-content" id="cc-c27"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="貼給AI的自介MD：
-你好，我是Rose，資深企業領導者。
-過去20多年累積：演講50+場、
-媒體專欄80+篇、專訪40+篇。
-核心主題：數位轉型/領導力/女性領導"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c27')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c27')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c28" data-base="done" data-status="done" style="left: 60px; top: 560px; width: 330px; z-index: 128;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c28','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c28','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c28','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c28','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c28')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ Phase 0-1</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c28')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c28">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="✅ Phase 0-1 已完成">✅ Phase 0-1 已完成</textarea>
-      </div>
-      <div class="card-content" id="cc-c28"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="• Claude Desktop 已安裝，Cowork已啟用
-• 工作資料夾已選定（Rose_Content）
-• Rose自介已設定給AI
-• CLAUDE.md v0 已建立
-• 資料夾結構已建好"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c28')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c28')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c29" data-base="peter" data-status="peter" style="left: 440px; top: 160px; width: 330px; z-index: 129;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c29','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c29','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c29','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c29','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c29')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 2</span>
-      
-      <button class="card-del" onclick="removeCard('c29')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c29">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📥 Phase 2｜內容入庫">📥 Phase 2｜內容入庫</textarea>
-      </div>
-      <div class="card-content" id="cc-c29"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：1-2週
-完成後：200+篇可搜尋可追蹤"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c29')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c29')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c30" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 130;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c30','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c30','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c30','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c30','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c30')" title="折疊/展開">﹀</button>
-      <span class="card-badge">素材卡</span>
-      
-      <button class="card-del" onclick="removeCard('c30')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c30">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🃏 _card.md 格式">🃏 _card.md 格式</textarea>
-      </div>
-      <div class="card-content" id="cc-c30"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 173px;" data-val="---
-編號：SPE-008
-標題：心理安全感是AI時代最重要的競爭力
-日期：2026-06-17
-來源：Podcast
-主題標籤：#心理安全感 #AI時代
-出書潛力：★★★★
-課程潛力：★★★★★
----"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c30')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c30')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c31" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 131;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c31','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c31','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c31','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c31','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c31')" title="折疊/展開">﹀</button>
-      <span class="card-badge">ContentIndex</span>
-      
-      <button class="card-del" onclick="removeCard('c31')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c31">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📊 ContentIndex.md（總索引）">📊 ContentIndex.md（總索引）</textarea>
-      </div>
-      <div class="card-content" id="cc-c31"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="所有素材的狀態追蹤總表。
-整個系統的神經中樞。"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c31')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c31')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c32" data-base="wip" data-status="wip" style="left: 440px; top: 560px; width: 330px; z-index: 132;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c32','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c32','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c32','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c32','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c32')" title="折疊/展開">﹀</button>
-      <span class="card-badge">🔶 Phase 2</span>
-      <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
-      <button class="card-del" onclick="removeCard('c32')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c32">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔶 Phase 2 進行中">🔶 Phase 2 進行中</textarea>
-      </div>
-      <div class="card-content" id="cc-c32"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="✅ Podcast全部建卡（SPE-007、SPE-008）
-🔶 當前素材卡數量建立中
-⬜ ContentIndex.md 待下一步建立"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c32')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c32')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c33" data-base="peter" data-status="peter" style="left: 820px; top: 160px; width: 330px; z-index: 133;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c33','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c33','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c33','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c33','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c33')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 3</span>
-      
-      <button class="card-del" onclick="removeCard('c33')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c33">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔍 Phase 3｜深度分析">🔍 Phase 3｜深度分析</textarea>
-      </div>
-      <div class="card-content" id="cc-c33"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="完成後：思想演進地圖、跨文章洞察"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c33')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c33')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c34" data-base="done" data-status="done" style="left: 1340px; top: 669.231px; width: 300px; z-index: 144;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c34','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c34','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c34','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c34','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c34')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ 價值卡</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c34')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c34">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💎 Rose 價值卡（已建立）">💎 Rose 價值卡（已建立）</textarea>
-      </div>
-      <div class="card-content" id="cc-c34"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 192px;" data-val="VC-01 勇氣不是不害怕
-VC-02 沉默沒讓任何人獲利
-VC-03 不是框架限制你
-VC-04 一個團隊最可怕的
-VC-05 主管最重要的角色
-VC-06 AI時代最稀缺的
-VC-07 愛是你最大的競爭力
-VC-08 沉默的共犯
-VC-09 錯誤是學費還是罰款
-VC-10 成功不是一個地點"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c34')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c34')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c35" data-base="peter" data-status="peter" style="left: 1200px; top: 160px; width: 330px; z-index: 135;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c35','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c35','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c35','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c35','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c35')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 4</span>
-      
-      <button class="card-del" onclick="removeCard('c35')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c35">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📚 Phase 4｜策展出書">📚 Phase 4｜策展出書</textarea>
-      </div>
-      <div class="card-content" id="cc-c35"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="沒有Workspace → 3個月
-有Workspace → 3-6週"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c35')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c35')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c36" data-base="done" data-status="done" style="left: 60px; top: 760px; width: 330px; z-index: 136;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c36','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c36','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c36','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c36','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c36')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ Root</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c36')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c36">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 Rose 根目錄（已建好）">📁 Rose 根目錄（已建好）</textarea>
-      </div>
-      <div class="card-content" id="cc-c36"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 77px;" data-val="Rose_Content/ ← 所有內容資產
-Rose_Business/ ← 商業行政
-Rose_Social/ ← 社群素材
-Rose_Admin/ ← 行政文件"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c36')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c36')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c37" data-base="done" data-status="done" style="left: 60px; top: 960px; width: 300px; z-index: 137;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c37','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c37','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c37','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c37','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c37')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ 課程</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c37')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c37">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎓 課程">🎓 課程</textarea>
-      </div>
-      <div class="card-content" id="cc-c37"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="兩條獨立產品線：
-• 天下線上課
-• 愛盟實體課"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c37')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c37')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card done" id="c38" data-base="done" data-status="done" style="left: 440px; top: 960px; width: 300px; z-index: 138;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c38','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c38','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c38','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c38','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c38')" title="折疊/展開">﹀</button>
-      <span class="card-badge">✅ Podcast</span>
-      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
-      <button class="card-del" onclick="removeCard('c38')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c38">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎙 Podcast（已完成整理）">🎙 Podcast（已完成整理）</textarea>
-      </div>
-      <div class="card-content" id="cc-c38"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="20+ 集，每集三件套：
-整理版.md + 文字稿.docx + 音檔
-下一步：建素材卡（_card.md）"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c38')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c38')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c39" data-base="wip" data-status="wip" style="left: 820px; top: 960px; width: 300px; z-index: 139;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c39','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c39','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c39','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c39','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c39')" title="折疊/展開">﹀</button>
-      <span class="card-badge">🔶 Youtube</span>
-      <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
-      <button class="card-del" onclick="removeCard('c39')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c39">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="▶️ Youtube（整理中）">▶️ Youtube（整理中）</textarea>
-      </div>
-      <div class="card-content" id="cc-c39"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="歸檔補強中
-目標：對齊Podcast三件套格式"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c39')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c39')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div></div>
+<div id="vp">
+  <div id="world">
+    <svg id="lines"><defs></defs></svg>
+    <div id="selbox"></div>
+  </div>
 </div>
 
-<div id="slash-menu" style="display: none;">
+<div id="slash-menu">
   <div class="slash-item" onclick="insertHeading(1)"><span class="si-label">H1</span><span>大標題</span></div>
   <div class="slash-item" onclick="insertHeading(2)"><span class="si-label">H2</span><span>次標題</span></div>
   <div class="slash-item" onclick="insertHeading(3)"><span class="si-label">H3</span><span>小標題</span></div>
 </div>
 
-<div id="ctx-menu" style="display: none;"></div>
-<div id="arrow-menu" style="display: none;"></div>
+<div id="ctx-menu"></div>
+<div id="arrow-menu"></div>
 
 <div id="ov">
   <div id="modal">
     <h3 id="m-head">編輯卡片</h3>
     <div class="mf"><label>標題</label><input type="text" id="m-title"></div>
-    <div class="mf"><label>內容</label><textarea id="m-body" rows="8" data-val=""></textarea></div>
+    <div class="mf"><label>內容</label><textarea id="m-body" rows="8"></textarea></div>
     <div class="mf"><label>狀態</label>
       <select id="m-status">
         <option value="done">✅ 已完成</option>
@@ -1359,6 +946,7 @@ function restoreBoard(id){
 function switchBoard(id){
   if(id===currentBoard)return;
   saveBoardSnapshot(currentBoard);
+  saveLocalData();
   currentBoard=id;renderTabs();
   selectedCards.clear();selectedLines.clear();connFrom=null;
   world.innerHTML='<svg id="lines"><defs></defs></svg>';
@@ -1453,27 +1041,80 @@ function deleteBoard(id){
 }
 
 // ══ GITHUB SYNC ══
-async function saveToGitHub(){
+// 存卡片資料到 localStorage
+function saveLocalData(){
   saveBoardSnapshot(currentBoard);
+  // 把每個 board 的卡片資料序列化
+  const allData={};
+  Object.keys(boardData).forEach(bid=>{
+    allData[bid]=boardData[bid];
+  });
+  allData[currentBoard]=boardData[currentBoard];
+  localStorage.setItem('wb_data', JSON.stringify(allData));
+  localStorage.setItem('wb_conns', JSON.stringify(connections));
+  localStorage.setItem('wb_boards', JSON.stringify(boards));
+}
+
+// 從 localStorage 還原
+function loadLocalData(){
+  try{
+    const saved=localStorage.getItem('wb_data');
+    const savedBoards=localStorage.getItem('wb_boards');
+    if(savedBoards){
+      const b=JSON.parse(savedBoards);
+      if(b&&b.length>0)boards=b;
+    }
+    if(saved){
+      const allData=JSON.parse(saved);
+      Object.keys(allData).forEach(bid=>{boardData[bid]=allData[bid];});
+      return true;
+    }
+  }catch(e){console.log('loadLocalData error',e);}
+  return false;
+}
+
+async function saveToGitHub(){
+  // 先存到本機
+  saveLocalData();
   const REPO='Ghjasmine/jasmine',FILE='index.html';
   let tk=localStorage.getItem('gh_tk');
-  if(!tk){tk=prompt('請輸入 GitHub Token：');if(!tk)return;localStorage.setItem('gh_tk',tk);}
+  if(!tk){
+    tk=prompt('請輸入 GitHub Token（只需輸入一次，會記在這台電腦）：');
+    if(!tk){alert('未輸入 Token，僅儲存到本機');return;}
+    localStorage.setItem('gh_tk',tk);
+  }
   const btn=document.querySelector('[onclick="saveToGitHub()"]');
-  const orig=btn.textContent;btn.textContent='⏳ 儲存中...';btn.disabled=true;
+  const orig=btn.textContent;
+  btn.textContent='⏳ 儲存中...';btn.disabled=true;
   try{
-    const mr=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}});
-    if(mr.status===401){localStorage.removeItem('gh_tk');throw new Error('Token 無效，請重新產生');}
-    const meta=await mr.json();
-    // 先把所有 textarea 的 value 寫回 HTML attribute，才能被 outerHTML 抓到
-    document.querySelectorAll('textarea').forEach(ta=>{
-      ta.setAttribute('data-val', ta.value);
+    // 把所有 textarea value 寫進 data-val
+    document.querySelectorAll('textarea').forEach(ta=>{ta.setAttribute('data-val',ta.value);});
+    const mr=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}
     });
+    if(mr.status===401){
+      localStorage.removeItem('gh_tk');
+      throw new Error('Token 無效，請重新輸入');
+    }
+    const meta=await mr.json();
     const html=document.documentElement.outerHTML;
+    // 還原 data-val（不讓 attribute 留在頁面上）
+    document.querySelectorAll('textarea[data-val]').forEach(ta=>{ta.removeAttribute('data-val');});
     const encoded=btoa(unescape(encodeURIComponent(html)));
-    const res=await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`,{method:'PUT',headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message:'update '+new Date().toISOString().slice(0,16),content:encoded,sha:meta.sha})});
-    btn.textContent=res.ok?'✅ 已儲存':'❌ 失敗';
-    if(!res.ok)throw new Error('API error '+res.status);
-  }catch(e){btn.textContent='❌ 失敗';alert(e.message);}
+    const res=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
+      method:'PUT',
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'update '+new Date().toISOString().slice(0,16),content:encoded,sha:meta.sha})
+    });
+    if(res.ok){
+      btn.textContent='✅ 已儲存';
+    } else {
+      throw new Error('GitHub API error '+res.status);
+    }
+  }catch(e){
+    btn.textContent='❌ 失敗';
+    alert(e.message);
+  }
   setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
 }
 
@@ -1637,15 +1278,24 @@ function buildRose(){
 
 // ══ INIT ══
 renderTabs();
-buildPeter();
+const _hasLocal=loadLocalData();
+if(_hasLocal && boardData[currentBoard]){
+  // 從 localStorage 還原
+  const d=boardData[currentBoard];
+  world.insertAdjacentHTML('beforeend',d.html);
+  d.conns.forEach(c=>connections.push(c));
+  world.querySelectorAll('textarea[data-val]').forEach(ta=>{
+    ta.value=ta.getAttribute('data-val');
+    ta.removeAttribute('data-val');
+    ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';
+  });
+  world.querySelectorAll('.card').forEach(el=>bindCardEvents(el,el.id));
+  renderTabs();
+} else {
+  buildPeter();
+}
 applyT();
-// 還原存檔時寫入的 textarea 值
-document.querySelectorAll('textarea[data-val]').forEach(ta=>{
-  ta.value=ta.getAttribute('data-val');
-  ta.removeAttribute('data-val');
-  ta.style.height='auto';
-  ta.style.height=ta.scrollHeight+'px';
-});
+_drawLines();
 </script>
-
-</body></html>
+</body>
+</html>
