@@ -1,604 +1,4 @@
-<html lang="zh-TW"><style>.app-crx-show-flight-price-compare {
-  width: 320px;
-  overflow: hidden;
-  position: fixed;
-  border-radius: 8px;
-  right: 20px;
-  top: 20px;
-  background: #fff;
-  z-index: 999;
-  box-shadow: 0px 8px 16px 0px rgba(69, 88, 115, 0.12);
-  color: #8592a6;
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: 0px;
-  font-family: system-ui;
-  text-align: left;
-}
-.app-crx-show-flight-price-compare .flex,
-.app-crx-show-flight-price-compare .flex-column,
-.app-crx-show-flight-price-compare .v-center,
-.app-crx-show-flight-price-compare .h-center,
-.app-crx-show-flight-price-compare .flex-column-center,
-.app-crx-show-flight-price-compare .flex-center {
-  display: -webkit-flex;
-  display: flex;
-}
-.app-crx-show-flight-price-compare .flex1 {
-  flex: 1 1 auto;
-}
-.app-crx-show-flight-price-compare .h-flex-center,
-.app-crx-show-flight-price-compare .h-center,
-.app-crx-show-flight-price-compare .flex-column-center,
-.app-crx-show-flight-price-compare .flex-center {
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-.app-crx-show-flight-price-compare .v-flex-center,
-.app-crx-show-flight-price-compare .v-center,
-.app-crx-show-flight-price-compare .flex-center {
-  -webkit-align-items: center;
-  align-items: center;
-}
-.app-crx-show-flight-price-compare .flex-between {
-  justify-content: space-between;
-}
-.app-crx-show-flight-price-compare .flex-column {
-  flex-direction: column;
-}
-.app-crx-show-flight-price-compare .flex-column-center {
-  flex-direction: column;
-}
-.app-crx-show-flight-price-compare .ml-4 {
-  margin-left: 4px;
-}
-.app-crx-show-flight-price-compare .mr-4 {
-  margin-right: 4px;
-}
-.app-crx-show-flight-price-compare .mr-16 {
-  margin-right: 16px;
-}
-.app-crx-show-flight-price-compare .ft-12 {
-  font-size: 12px;
-  line-height: 18px;
-}
-.app-crx-show-flight-price-compare .align-center {
-  align-items: center;
-}
-.app-crx-show-flight-price-compare .justify-around {
-  justify-content: space-around;
-}
-.app-crx-show-flight-price-compare .flex-wrap {
-  flex-wrap: wrap;
-}
-.app-crx-show-flight-price-compare .color-black {
-  color: #0f294d;
-}
-.app-crx-show-flight-price-compare .color-cyan {
-  color: #06aebd;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .header-wrapper {
-  display: flex;
-  align-items: center;
-  margin: 16px 16px 0;
-}
-.app-crx-show-flight-price-compare .header-wrapper.bold {
-  justify-content: flex-start;
-}
-.app-crx-show-flight-price-compare .header-wrapper.bold .header-text {
-  font-size: 16px;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-icon {
-  width: 44px;
-  height: 44px;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-icon .img {
-  transform: scale(0.5, 0.5);
-  max-width: 100%;
-  border-radius: 50%;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-text {
-  color: #3264ff;
-  font-size: 14px;
-  text-align: center;
-  font-weight: bold;
-  height: 22px;
-  letter-spacing: 0px;
-  line-height: 22px;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-close {
-  cursor: pointer;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-close span {
-  text-align: center;
-  color: #ced2d9;
-  font-size: 22px;
-}
-.app-crx-show-flight-price-compare .header-wrapper .header-close path {
-  fill: #8592a6;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper {
-  border-radius: 0px 0px 4px 4px;
-}
-.app-crx-show-flight-price-compare .tags {
-  display: flex;
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .tags .flight-tag {
-  background-color: rgba(50, 100, 255, 0.08);
-  color: #3264ff;
-  padding: 4px;
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 0px;
-  line-height: 18px;
-  border-radius: 4px 4px 0px 0px;
-}
-.app-crx-show-flight-price-compare .tags .compare-tag {
-  padding: 2px 4px;
-  background: rgba(50, 100, 255, 0.08);
-  color: #3264ff;
-  border-radius: 1px;
-}
-.app-crx-show-flight-price-compare .flightdetail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.app-crx-show-flight-price-compare .flightdetail .from-wrapper .date,
-.app-crx-show-flight-price-compare .flightdetail .to-wrapper .date {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .flightdetail .from-wrapper .time,
-.app-crx-show-flight-price-compare .flightdetail .to-wrapper .time {
-  color: #0f294d;
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .flightdetail .to-wrapper {
-  text-align: right;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper {
-  background-color: #f5f7fa;
-  padding: 8px;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper .airline-dashed {
-  width: 80px;
-  height: 2px;
-  background-color: #dadfe6;
-  position: relative;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper .airline-dashed::before,
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper .airline-dashed::after {
-  content: '';
-  display: block;
-  width: 4px;
-  height: 4px;
-  position: absolute;
-  top: -1px;
-  background-color: #dadfe6;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper .airline-dashed::before {
-  left: 0;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper .airline-dashed::after {
-  right: 0;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .airplane-icon-wrapper img {
-  height: 32px;
-  width: 32px;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .passangerInfo {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .flightdetail-wrapper .passangerInfo path {
-  fill: #06aebd !important;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .flightinfo-wrapper {
-  max-height: 50vh;
-  overflow: auto;
-}
-.app-crx-show-flight-price-compare .flightinfo-wrapper .compare-tag {
-  font-size: 14px;
-  color: #455873;
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .flightinfo-wrapper .compare-tag span {
-  color: #F94C86;
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .flightinfo-wrapper .compare-tag.higher span {
-  color: #06aebd;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .compare-wrapper {
-  margin: 0 16px 8px;
-}
-.app-crx-show-flight-price-compare .compare-wrapper .book-btn {
-  background: #3264ff;
-  border-radius: 2px;
-  height: 38px;
-  width: 100%;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  text-align: center;
-}
-.app-crx-show-flight-price-compare .compare-wrapper .book-btn:hover {
-  background-color: #2D5AE5;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.m-chromePluginV2__content-leftimg {
-  width: 66px;
-  height: 16px;
-  background-size: cover;
-}
-.m-chromePluginV2__content-leftimg-wrapper {
-  width: 66px;
-  height: 16px;
-}
-.m-chromePluginV2__price-item {
-  justify-content: flex-end;
-  flex: 1;
-  text-align: center;
-}
-.m-chromePluginV2__price-text {
-  word-break: break-all;
-  width: 100%;
-}
-.m-chromePluginV2__price-otherbar,
-.m-chromePluginV2__price-tripbar,
-.m-chromePluginV2__price-tripbar-loading {
-  width: 32px;
-  border-radius: 4px 4px 0 0;
-}
-.m-chromePluginV2__price-otherbar {
-  height: 60px;
-  background: rgba(50, 100, 255, 0.32);
-}
-.m-chromePluginV2__price-tripbar {
-  height: 40px;
-  background: #3264ff;
-}
-.m-chromePluginV2__price-tripbar-loading {
-  height: 60px;
-  background: #3264ff;
-}
-.app-crx-show-flight-price-compare .loading-wrapper .loading-text {
-  padding: 0 16px 16px;
-}
-.app-crx-show-flight-price-compare .loading-wrapper .header-icon {
-  width: 16px;
-  height: 16px;
-}
-.app-crx-show-flight-price-compare .loading-wrapper .header-icon path {
-  fill: #3264FF !important;
-}
-.app-crx-show-flight-price-compare .loading-wrapper .loading-loadgif {
-  display: flex;
-  flex-direction: column;
-  margin-left: 4px;
-  justify-content: center;
-  align-items: center;
-}
-.app-crx-show-flight-price-compare .noflight-wrapper .noflight-text {
-  margin-top: 4px;
-  overflow: hidden;
-  color: #455873;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 0px;
-  line-height: 18px;
-  width: 288px;
-  margin: 0 16px 16px 16px;
-}
-.app-crx-show-flight-price-compare .flex {
-  display: flex;
-}
-.app-crx-show-flight-price-compare .color-tertiaryBlack {
-  color: #8592a6;
-}
-.app-crx-show-flight-price-compare .color-brandBlue {
-  color: #3264ff;
-}
-.app-crx-show-flight-price-compare .f-bold {
-  font-weight: bold;
-}
-.app-crx-show-flight-price-compare .mt-4 {
-  margin-top: 4px;
-}
-.app-crx-show-flight-price-compare .mb-4 {
-  margin-bottom: 4px;
-}
-.app-crx-show-flight-price-compare .f-12 {
-  font-size: 12px;
-}
-.app-crx-show-flight-price-compare .divider {
-  width: 100%;
-  height: 1px;
-  background-color: #dadfe6;
-  transform: scaleY(0.5);
-}
-.app-crx-show-flight-price-compare .mh-8 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .mh-16 {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.app-crx-show-flight-price-compare .mt-8 {
-  margin-top: 8px;
-}
-.app-crx-show-flight-price-compare .mt-16 {
-  margin-top: 16px;
-}
-.app-crx-show-flight-price-compare .mb-8 {
-  margin-bottom: 8px;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper {
-  color: #fff;
-  background: #3264ff;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .header-wrapper {
-  color: #fff;
-  background: #3264ff;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .header-wrapper .header-icon .img {
-  display: none;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .header-wrapper .header-text {
-  color: #fff;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .header-wrapper .header-close span {
-  color: #fff;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .content-1 {
-  margin: 16px 16px 8px 16px;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .content-2 {
-  margin: 0 16px 8px 16px;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .content-2 span {
-  text-decoration: underline;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .trip-com-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 24px 16px 24px;
-}
-.app-crx-show-flight-price-compare .welcome-inject-wrapper .trip-com-wrapper .trip-com-logo {
-  height: 18px;
-  width: 73px;
-}
-</style><div id="save-fly-plugin-inject-element"></div><head>
+<html lang="zh-TW"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rose × Jasmine 工作後台</title>
@@ -740,7 +140,10 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 .card-title-el{
   width:100%;border:none;outline:none;resize:none;background:transparent;
   font-size:13px;font-weight:700;color:var(--text);line-height:1.4;
-  font-family:var(--font);padding:0;overflow:hidden;
+  font-family:var(--font);padding:0;overflow:hidden;cursor:text;
+}
+.card-title-el:focus,.card-body-el:focus{
+  background:rgba(91,84,200,.04);border-radius:3px;
 }
 .card-body-el{
   width:100%;border:none;outline:none;resize:none;background:transparent;
@@ -843,10 +246,10 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
   <span class="logo">✦</span>
   <span id="site-title" contenteditable="true" spellcheck="false">Rose 工作後台</span>
   <div class="tsep"></div>
-  <div id="board-tabs"><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782980593830',this.textContent.trim())" onclick="switchBoard('b1782980593830')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782980593830')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
+  <div id="board-tabs"><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('peter',this.textContent.trim())" onclick="switchBoard('peter')">Peter 系統架構</span><span class="btab-del" onclick="deleteBoard('peter')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('rose',this.textContent.trim())" onclick="switchBoard('rose')">Rose 工作板</span><span class="btab-del" onclick="deleteBoard('rose')">×</span></div><div class="btab"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782979275157',this.textContent.trim())" onclick="switchBoard('b1782979275157')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782979275157')">×</span></div><div class="btab active"><span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('b1782985502298',this.textContent.trim())" onclick="switchBoard('b1782985502298')">新白板</span><span class="btab-del" onclick="deleteBoard('b1782985502298')">×</span></div><button class="btab-add" title="新增白板">＋</button></div>
   <div class="tsep"></div>
   <button class="tbtn" onclick="zoomIn()">＋</button>
-  <span id="zdsp">93%</span>
+  <span id="zdsp">65%</span>
   <button class="tbtn" onclick="zoomOut()">－</button>
   <button class="tbtn" onclick="resetView()">↺</button>
   <div class="tsep"></div>
@@ -854,8 +257,8 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 </div>
 
 <div id="symbar">
-  <button class="sbtn" id="conn-btn" onclick="toggleConnMode()" title="點卡片→點另一張卡片連線">⟶ 連線</button>
-  <span id="conn-hint" style="display: none;">再點第二張卡片完成連線</span>
+  <button class="sbtn active" id="conn-btn" onclick="toggleConnMode()" title="點卡片→點另一張卡片連線">⟶ 連線</button>
+  <span id="conn-hint">點第一張卡片</span>
   <div class="ssep"></div>
   <span style="font-size:11px;color:var(--muted);">線色</span>
   <div class="lc-dot active-lc" style="background:#1a2f5e;" data-c="#1a2f5e" onclick="setLC(this)" title="深藍"></div>
@@ -878,696 +281,450 @@ body{font-family:var(--font);background:var(--bg);overflow:hidden;height:100vh;u
 </div>
 
 <div id="vp" style="">
-  <div id="world" style="transform: translate(206.26px, -791.728px) scale(0.9321);"><svg id="lines"><defs><marker id="mk-2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk-1a2f5e" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a2f5e"></polygon></marker></defs><path d="M431.69900000000007,-526.498726609495 Q400.7577,-544.2152559620026 369.8164,-524.8022253145102" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l2" style="cursor: pointer;"></path><path d="M581.1543668411178,-444.015 Q581.8405415226622,-424.34320480892666 582.5267162042065,-403.848" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l3" style="cursor: pointer;"></path><path d="M724.6990000000001,-511.49117381509825 Q1162.0045,-534.70466308676 1599.31,-397.9181523584217" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l4" style="cursor: pointer;"></path><path d="M724.6990000000001,-467.8258665625712 Q941.6245,-455.00080434085817 1158.55,-282.1757421191451" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l5" style="cursor: pointer;"></path><path d="M443.01926764068656,516.201 Q746.1596338203433,597.5953434393463 1049.3,838.9896868786925" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l7" style="cursor: pointer;"></path><path d="M446.48900000000003,429.6009058783394 Q1273.8845000000001,346.59172299447 2101.28,423.5825401106006" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l8" style="cursor: pointer;"></path><path d="M143.718,1235.0595891342796 Q780.0540000000001,990.4205267788309 1416.39,905.7814644233821" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l10" style="cursor: pointer;"></path><path d="M143.718,1205.7918099095214 Q760.544,856.7876731777055 1377.37,667.7835364458897" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l11" style="cursor: pointer;"></path><path d="M322.34135000000003,794.3580526878516 Q893.530675,882.0767296676296 1464.72,1129.7954066474076" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l13" style="cursor: pointer;"></path><path d="M322.34135000000003,780.759622650741 Q1045.790675,853.5636192113973 1769.24,1086.3676157720536" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l14" style="cursor: pointer;"></path><path d="M232.341842864776,516.201 Q170.80560178147616,586.9582553500201 109.2693606981763,731.559" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l18" style="cursor: pointer;"></path><path d="M425.9089121668004,516.201 Q474.2449560834002,515.9827991102807 522.581,573.7678509204811" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l19" style="cursor: pointer;"></path><path d="M143.718,1326.5971996524706 Q165.17699999999996,1320.0746000000001 186.63599999999997,1339.3028003475295" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l20" style="cursor: pointer;"></path><path d="M296.6506989047676,831.909 Q573.3023494523837,922.6946804596748 849.954,1173.4803609193498" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk-2a4080)" data-lid="l21" style="cursor: pointer;"></path><path d="M1551.55,-234.56298356418586 Q1765.275,-354.23206594207704 1979,-313.90114831996823" stroke="#1a2f5e" stroke-width="2" fill="none" marker-end="url(#mk-1a2f5e)" data-lid="l1" style="cursor: pointer;"></path></svg>
-    
-    <div id="selbox"></div>
-  
-    
-    <div id="selbox"></div>
-  
-    
-    <div id="selbox"></div>
-  <div class="card peter" id="c2" data-base="peter" data-status="peter" style="left: 431.699px; top: -617.015px; width: 292.913px; z-index: 201; height: 172.951px;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c2','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c2','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c2','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c2','r')"></div>
+  <div id="world" style="transform: translate(83px, 61px) scale(0.65);"><svg id="lines"><defs><marker id="mk2a4080" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a4080"></polygon></marker><marker id="mk1a7a4a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a7a4a"></polygon></marker><marker id="mkc05a10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#c05a10"></polygon></marker></defs><path d="M630,162.5769230769231 Q510,111.29487179487182 390,204.01282051282053" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498066" style="cursor: pointer;"></path><path d="M220.24070021881838,305 Q218.43544857768052,331.41684901531727 216.63019693654266,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498067" style="cursor: pointer;"></path><path d="M351.3126491646778,305 Q399.2243436754177,303.7529832935561 447.1360381861575,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498068" style="cursor: pointer;"></path><path d="M390,285.21140939597313 Q605,273.8959731543624 820,422.58053691275165" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498069" style="cursor: pointer;"></path><path d="M225,305 Q225,432.5 225,560" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782985498070" style="cursor: pointer;"></path><path d="M640.2488687782806,223 Q698.6877828054298,156.4366515837104 757.1266968325792,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498071" style="cursor: pointer;"></path><path d="M605,324 Q605,342 605,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498072" style="cursor: pointer;"></path><path d="M754.65,324 Q787.5,322.28999999999996 820.35,360" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498073" style="cursor: pointer;"></path><path d="M605,324 Q605,442 605,560" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782985498074" style="cursor: pointer;"></path><path d="M968.5396039603961,223 Q913.960396039604,158.75247524752473 859.3811881188119,160" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498075" style="cursor: pointer;"></path><path d="M981.1975524475524,305 Q979.7552447552448,331.6346153846154 978.3129370629371,360" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782985498076" style="cursor: pointer;"></path><path d="M990,167.33783783783784 Q1095,125.24324324324323 1200,209.14864864864865" stroke="#2a4080" stroke-width="2" fill="none" marker-end="url(#mk2a4080)" data-lid="l1782985498077" style="cursor: pointer;"></path><path d="M225,781 Q225,770.5 225,760" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782985498078" style="cursor: pointer;"></path><path d="M217.04724409448818,962 Q217.1259842519685,960.9527559055118 217.20472440944883,960" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782985498079" style="cursor: pointer;"></path><path d="M390,947.1164383561644 Q415,945.1643835616438 440,973.2123287671233" stroke="#1a7a4a" stroke-width="2" fill="none" marker-end="url(#mk1a7a4a)" data-lid="l1782985498080" style="cursor: pointer;"></path><path d="M390,901.0872483221476 Q605,873.3221476510066 820,1005.5570469798657" stroke="#c05a10" stroke-width="2" fill="none" marker-end="url(#mkc05a10)" data-lid="l1782985498081" style="cursor: pointer;"></path></svg><div class="card header" id="c1782985498066" data-base="header" data-status="header" style="left: 630px; top: 40px; width: 360px; z-index: 101;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498066','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498066','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498066','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498066','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c2')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498066')" title="折疊/展開">﹀</button>
+      <span class="card-badge">ROOT</span>
+      
+      <button class="card-del" onclick="removeCard('c1782985498066')">×</button>
+    </div>
+    <div class="card-body-wrap" id="cbw-c1782985498066">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="Rose 內容後台">Rose 內容後台</textarea>
+      <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="Jasmine 協助建立的完整內容管理系統
+
+淡藍=Peter架構 ✅=已完成 🔶=進行中 ⬜=未開始">Jasmine 協助建立的完整內容管理系統
+
+淡藍=Peter架構 ✅=已完成 🔶=進行中 ⬜=未開始</textarea>
+      <div class="card-footer">
+        <button class="edit-btn" onclick="openModal('c1782985498066')">📝 編輯</button>
+        
+      </div>
+    </div>
+    <div class="rh" onmousedown="rhDown(event,'c1782985498066')">
+      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
+    </div></div><div class="card peter" id="c1782985498067" data-base="peter" data-status="peter" style="left: 60px; top: 160px; width: 330px; z-index: 102;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498067','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498067','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498067','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498067','r')"></div>
+    <div class="card-hdr">
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498067')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 0-1</span>
       
-      <button class="card-del" onclick="removeCard('c2')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498067')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c2">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="⚙️ Phase 0-1｜工具裝好 + Workspace 建好">⚙️ Phase 0-1｜工具裝好 + Workspace 建好</textarea>
-      </div>
-      <div class="card-content" id="cc-c2"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：30分鐘 + 2小時
-完成後：AI有記憶、可傳檔、會備份寫log"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498067">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="⚙️ Phase 0-1｜工具裝好 + Workspace 建好">⚙️ Phase 0-1｜工具裝好 + Workspace 建好</textarea>
+      <textarea class="card-body-el" rows="2" placeholder="輸入內容（/ 插入標題）" style="height: 38px;" data-val="時間：30分鐘 + 2小時">時間：30分鐘 + 2小時</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c2')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498067')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c2')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498067')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c3" data-base="peter" data-status="peter" style="left: 69.8164px; top: -616.19px; width: 300px; z-index: 191;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c3','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c3','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c3','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c3','r')"></div>
+    </div></div><div class="card peter" id="c1782985498068" data-base="peter" data-status="peter" style="left: 60px; top: 360px; width: 300px; z-index: 103;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498068','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498068','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498068','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498068','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c3')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498068')" title="折疊/展開">﹀</button>
       <span class="card-badge">Step 1</span>
       
-      <button class="card-del" onclick="removeCard('c3')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498068')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c3">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💻 安裝 Claude Desktop">💻 安裝 Claude Desktop</textarea>
-      </div>
-      <div class="card-content" id="cc-c3"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 77px;" data-val="1. https://claude.ai/download
+    <div class="card-body-wrap" id="cbw-c1782985498068">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💻 安裝 Claude Desktop">💻 安裝 Claude Desktop</textarea>
+      <textarea class="card-body-el" rows="5" placeholder="輸入內容（/ 插入標題）" style="height: 96px;" data-val="1. https://claude.ai/download
 2. 選作業系統安裝
 3. 登入帳號
-4. Settings→Features→啟用 Cowork"></textarea></div>
+4. Settings→Features→啟用 Cowork">1. https://claude.ai/download
+2. 選作業系統安裝
+3. 登入帳號
+4. Settings→Features→啟用 Cowork</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c3')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498068')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c3')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498068')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c4" data-base="peter" data-status="peter" style="left: 435.465px; top: -403.848px; width: 300px; z-index: 202;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c4','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c4','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c4','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c4','r')"></div>
+    </div></div><div class="card peter" id="c1782985498069" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 300px; z-index: 104;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498069','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498069','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498069','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498069','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c4')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498069')" title="折疊/展開">﹀</button>
       <span class="card-badge">Step 2</span>
       
-      <button class="card-del" onclick="removeCard('c4')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498069')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c4">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 選工作資料夾">📁 選工作資料夾</textarea>
-      </div>
-      <div class="card-content" id="cc-c4"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="Cowork詢問「選擇一個資料夾」
-→ 選Rose的知識庫資料夾
-⚠️ 你選的資料夾 = AI的工作空間"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498069">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 選工作資料夾">📁 選工作資料夾</textarea>
+      <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="Cowork詢問「選擇一個資料夾」
+→ 選Rose的知識庫資料夾">Cowork詢問「選擇一個資料夾」
+→ 選Rose的知識庫資料夾</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c4')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498069')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c4')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498069')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card todo" id="c5" data-base="peter" data-status="" style="left: 1599.31px; top: -615.992px; width: 330px; z-index: 206;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c5','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c5','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c5','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c5','r')"></div>
+    </div></div><div class="card peter" id="c1782985498070" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 105;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498070','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498070','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498070','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498070','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c5')" title="折疊/展開">﹀</button>
-      <span class="card-badge">CLAUDE.md</span>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498070')" title="折疊/展開">﹀</button>
+      <span class="card-badge">Step 3</span>
       
-      <button class="card-del" onclick="removeCard('c5')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498070')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c5">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📄 CLAUDE.md — AI行為準則">📄 CLAUDE.md — AI行為準則</textarea>
-      </div>
-      <div class="card-content" id="cc-c5"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 365px;" data-val="# Rose 知識資產管理
-## 使用者資訊
-- 姓名：Rose
-- 身份：資深企業領導者
-- 目標：系統化整理 20+ 年文章，未來策展出書
-- 回覆語言：繁體中文
-
-## 基本規則
-1. 修改檔案前先備份
-2. 每次工作結束寫 log
-3. 新文章存到 C_Content/
-4. 處理完 _inbox 移到 _trash/
-5. 提及檔案顯示完整路徑
-
-## 內容處理規則
-1. 入庫時建「內容卡片」
-2. 主題標籤從現有分類選
-3. 同一篇文章可多個主題
-4. 重複內容只保留一份"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498070">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗣 第一句話：讓AI認識Rose">🗣 第一句話：讓AI認識Rose</textarea>
+      <textarea class="card-body-el" rows="6" placeholder="輸入內容（/ 插入標題）" style="height: 115px;" data-val="貼給AI的自介MD：
+你好，我是Rose，資深企業領導者。
+過去20多年累積：演講50+場、
+媒體專欄80+篇、專訪40+篇。
+核心主題：數位轉型/領導力/女性領導">貼給AI的自介MD：
+你好，我是Rose，資深企業領導者。
+過去20多年累積：演講50+場、
+媒體專欄80+篇、專訪40+篇。
+核心主題：數位轉型/領導力/女性領導</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c5')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498070')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c5')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498070')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card wip" id="c6" data-base="peter" data-status="wip" style="left: 1158.55px; top: -613.591px; width: 393.29px; z-index: 204; height: 830.816px;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c6','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c6','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c6','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c6','r')"></div>
+    </div></div><div class="card done" id="c1782985498071" data-base="done" data-status="done" style="left: 60px; top: 560px; width: 330px; z-index: 106;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498071','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498071','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498071','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498071','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c6')" title="折疊/展開">﹀</button>
-      <span class="card-badge">目錄結構</span>
-      
-      <button class="card-del" onclick="removeCard('c6')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498071')" title="折疊/展開">﹀</button>
+      <span class="card-badge">✅ Phase 0-1</span>
+      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
+      <button class="card-del" onclick="removeCard('c1782985498071')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c6">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗂 RoseLibrary/ 目錄">🗂 RoseLibrary/ 目錄</textarea>
-      </div>
-      <div class="card-content" id="cc-c6"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 633px;" data-val="【RoseLibrary】
-
-├── inbox/   ←
-├── trash/    ←  
-├── logs/     ← 
-│           
-├── Content/ 
-│   ├── Columns/ *00個 (待整理)
-│   ├── Podcast/  *21個
-│   ├── Youtube/ *03個  (進行中)
-│   ├── Speech/   *86個
-│   └── Social/ 
-│              └── 台灣─*19篇(2026)
-│              └── 大陸─*25篇(2026)
-│              └── 業配─*02篇
-│           
-├── Themes/  
-│   ├── T1_職場領導*61
-│   ├── T2_信仰見證
-│   ├── T3_職涯發展
-│   ├── T4_趨勢議題
-│   ├── T5_女性領導
-│   ├── T6_親子家庭
-│   ├── T7_主題模組
-│           
-└── Books/   
-│   └── 親愛的別怕，勇敢說yes/ 
-│   └──  *******
-│           
-├── Courses/
-│   └──C1-成為頂尖經理人，從自我成長到跨國管理15堂課 (天下)
-│   └──C2-心理安全感：卓越團隊的隱形能力  (天下)
-│   └──C3-不內耗的關係力 (愛盟)?"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498071">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="✅ Phase 0-1 已完成">✅ Phase 0-1 已完成</textarea>
+      <textarea class="card-body-el" rows="6" placeholder="輸入內容（/ 插入標題）" style="height: 115px;" data-val="• Claude Desktop 已安裝，Cowork已啟用
+• 工作資料夾已選定（Rose_Content）
+• Rose自介已設定給AI
+• CLAUDE.md v0 已建立
+• 資料夾結構已建好">• Claude Desktop 已安裝，Cowork已啟用
+• 工作資料夾已選定（Rose_Content）
+• Rose自介已設定給AI
+• CLAUDE.md v0 已建立
+• 資料夾結構已建好</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c6')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498071')">📝 編輯</button>
+        <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c6')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498071')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c7" data-base="peter" data-status="peter" style="left: 116.489px; top: 344.201px; width: 330px; z-index: 190;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c7','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c7','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c7','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c7','r')"></div>
+    </div></div><div class="card peter" id="c1782985498072" data-base="peter" data-status="peter" style="left: 440px; top: 160px; width: 330px; z-index: 107;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498072','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498072','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498072','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498072','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c7')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498072')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 2</span>
       
-      <button class="card-del" onclick="removeCard('c7')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498072')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c7">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📥 Phase 2｜內容入庫">📥 Phase 2｜內容入庫</textarea>
-      </div>
-      <div class="card-content" id="cc-c7"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：1-2週
-完成後：200+篇可搜尋可追蹤
-流程：丟_inbox→辨識→數位化→素材卡→歸檔"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498072">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📥 Phase 2｜內容入庫">📥 Phase 2｜內容入庫</textarea>
+      <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="時間：1-2週
+完成後：200+篇可搜尋可追蹤">時間：1-2週
+完成後：200+篇可搜尋可追蹤</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c7')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498072')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c7')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498072')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c8" data-base="peter" data-status="peter" style="left: 1049.3px; top: 783.337px; width: 330px; z-index: 125;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c8','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c8','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c8','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c8','r')"></div>
+    </div></div><div class="card peter" id="c1782985498073" data-base="peter" data-status="peter" style="left: 440px; top: 360px; width: 330px; z-index: 108;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498073','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498073','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498073','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498073','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c8')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498073')" title="折疊/展開">﹀</button>
       <span class="card-badge">素材卡</span>
       
-      <button class="card-del" onclick="removeCard('c8')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498073')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c8">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🃏 _card.md 格式">🃏 _card.md 格式</textarea>
-      </div>
-      <div class="card-content" id="cc-c8"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 173px;" data-val="---
+    <div class="card-body-wrap" id="cbw-c1782985498073">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🃏 _card.md 格式">🃏 _card.md 格式</textarea>
+      <textarea class="card-body-el" rows="10" placeholder="輸入內容（/ 插入標題）" style="height: 192px;" data-val="---
 編號：SPE-008
-標題：
-日期：
-來源：COL/SPE/INT/BKI/SOC
-主題標籤：
-出書潛力：★★★
+標題：心理安全感是AI時代最重要的競爭力
+日期：2026-06-17
+來源：Podcast
+主題標籤：#心理安全感 #AI時代
+出書潛力：★★★★
 課程潛力：★★★★★
----"></textarea></div>
+---">---
+編號：SPE-008
+標題：心理安全感是AI時代最重要的競爭力
+日期：2026-06-17
+來源：Podcast
+主題標籤：#心理安全感 #AI時代
+出書潛力：★★★★
+課程潛力：★★★★★
+---</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c8')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498073')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c8')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498073')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c9" data-base="peter" data-status="peter" style="left: 2101.28px; top: 327.537px; width: 300px; z-index: 221;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c9','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c9','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c9','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c9','r')"></div>
+    </div></div><div class="card peter" id="c1782985498074" data-base="peter" data-status="peter" style="left: 820px; top: 360px; width: 300px; z-index: 109;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498074','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498074','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498074','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498074','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c9')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498074')" title="折疊/展開">﹀</button>
       <span class="card-badge">ContentIndex</span>
       
-      <button class="card-del" onclick="removeCard('c9')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498074')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c9">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📊 ContentIndex.md（總索引）">📊 ContentIndex.md（總索引）</textarea>
-      </div>
-      <div class="card-content" id="cc-c9"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 77px;" data-val="所有素材的狀態追蹤總表。
-整個系統的神經中樞。
-欄位：編號/標題/日期/來源/主題
-數位化✓/摘要✓/入庫✓"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498074">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📊 ContentIndex.md（總索引）">📊 ContentIndex.md（總索引）</textarea>
+      <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="所有素材的狀態追蹤總表。
+整個系統的神經中樞。">所有素材的狀態追蹤總表。
+整個系統的神經中樞。</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c9')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498074')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c9')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498074')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c10" data-base="peter" data-status="peter" style="left: -186.282px; top: 1191.75px; width: 330px; z-index: 119;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c10','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c10','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c10','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c10','r')"></div>
+    </div></div><div class="card wip" id="c1782985498075" data-base="wip" data-status="wip" style="left: 440px; top: 560px; width: 330px; z-index: 110;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498075','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498075','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498075','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498075','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c10')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498075')" title="折疊/展開">﹀</button>
+      <span class="card-badge">🔶 Phase 2</span>
+      <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
+      <button class="card-del" onclick="removeCard('c1782985498075')">×</button>
+    </div>
+    <div class="card-body-wrap" id="cbw-c1782985498075">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔶 Phase 2 進行中">🔶 Phase 2 進行中</textarea>
+      <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="✅ Podcast全部建卡（SPE-007、SPE-008）
+🔶 當前素材卡數量建立中
+⬜ ContentIndex.md 待下一步建立">✅ Podcast全部建卡（SPE-007、SPE-008）
+🔶 當前素材卡數量建立中
+⬜ ContentIndex.md 待下一步建立</textarea>
+      <div class="card-footer">
+        <button class="edit-btn" onclick="openModal('c1782985498075')">📝 編輯</button>
+        <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">🔶 進行中</span>
+      </div>
+    </div>
+    <div class="rh" onmousedown="rhDown(event,'c1782985498075')">
+      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
+    </div></div><div class="card peter" id="c1782985498076" data-base="peter" data-status="peter" style="left: 820px; top: 160px; width: 330px; z-index: 111;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498076','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498076','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498076','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498076','r')"></div>
+    <div class="card-hdr">
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498076')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 3</span>
       
-      <button class="card-del" onclick="removeCard('c10')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498076')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c10">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔍 Phase 3｜深度分析">🔍 Phase 3｜深度分析</textarea>
-      </div>
-      <div class="card-content" id="cc-c10"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：持續進行
-完成後：思想演進地圖、跨文章洞察"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498076">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔍 Phase 3｜深度分析">🔍 Phase 3｜深度分析</textarea>
+      <textarea class="card-body-el" rows="2" placeholder="輸入內容（/ 插入標題）" style="height: 38px;" data-val="完成後：思想演進地圖、跨文章洞察">完成後：思想演進地圖、跨文章洞察</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c10')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498076')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c10')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498076')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c11" data-base="peter" data-status="peter" style="left: 1416.39px; top: 761.972px; width: 300px; z-index: 184;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c11','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c11','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c11','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c11','r')"></div>
+    </div></div><div class="card done" id="c1782985498077" data-base="done" data-status="done" style="left: 820px; top: 360px; width: 300px; z-index: 112;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498077','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498077','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498077','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498077','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c11')" title="折疊/展開">﹀</button>
-      <span class="card-badge">ThemeMap</span>
-      
-      <button class="card-del" onclick="removeCard('c11')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498077')" title="折疊/展開">﹀</button>
+      <span class="card-badge">✅ 價值卡</span>
+      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
+      <button class="card-del" onclick="removeCard('c1782985498077')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c11">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗺 ThemeMap.md">🗺 ThemeMap.md</textarea>
-      </div>
-      <div class="card-content" id="cc-c11"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="| 主題 | 篇數 | 出書潛力 |
-|------|------|----------|
-| 數位轉型 | 42篇 | ★★★★★ |
-| 領導力 | 35篇 | ★★★★☆ |
-| 女性領導 | 18篇 | ★★★☆☆ |"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498077">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💎 Rose 價值卡（已建立）">💎 Rose 價值卡（已建立）</textarea>
+      <textarea class="card-body-el" rows="11" placeholder="輸入內容（/ 插入標題）" style="height: 211px;" data-val="VC-01 勇氣不是不害怕
+VC-02 沉默沒讓任何人獲利
+VC-03 不是框架限制你
+VC-04 一個團隊最可怕的
+VC-05 主管最重要的角色
+VC-06 AI時代最稀缺的
+VC-07 愛是你最大的競爭力
+VC-08 沉默的共犯
+VC-09 錯誤是學費還是罰款
+VC-10 成功不是一個地點">VC-01 勇氣不是不害怕
+VC-02 沉默沒讓任何人獲利
+VC-03 不是框架限制你
+VC-04 一個團隊最可怕的
+VC-05 主管最重要的角色
+VC-06 AI時代最稀缺的
+VC-07 愛是你最大的競爭力
+VC-08 沉默的共犯
+VC-09 錯誤是學費還是罰款
+VC-10 成功不是一個地點</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c11')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498077')">📝 編輯</button>
+        <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c11')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498077')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c12" data-base="peter" data-status="peter" style="left: 1377.37px; top: 497.367px; width: 300px; z-index: 185;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c12','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c12','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c12','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c12','r')"></div>
+    </div></div><div class="card peter" id="c1782985498078" data-base="peter" data-status="peter" style="left: 1200px; top: 160px; width: 330px; z-index: 113;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498078','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498078','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498078','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498078','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c12')" title="折疊/展開">﹀</button>
-      <span class="card-badge">觀點演進</span>
-      
-      <button class="card-del" onclick="removeCard('c12')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c12">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📈 觀點演進分析">📈 觀點演進分析</textarea>
-      </div>
-      <div class="card-content" id="cc-c12"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="2017：技術升級
-2019：流程再造
-2021：文化變革 ← 轉折
-2023：組織免疫系統重塑
-不變核心：「人比技術重要」"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c12')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c12')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c13" data-base="peter" data-status="peter" style="left: -7.65865px; top: 659.909px; width: 330px; z-index: 132;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c13','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c13','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c13','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c13','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c13')" title="折疊/展開">﹀</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498078')" title="折疊/展開">﹀</button>
       <span class="card-badge">Phase 4</span>
       
-      <button class="card-del" onclick="removeCard('c13')">×</button>
+      <button class="card-del" onclick="removeCard('c1782985498078')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c13">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📚 Phase 4｜策展出書">📚 Phase 4｜策展出書</textarea>
-      </div>
-      <div class="card-content" id="cc-c13"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 58px;" data-val="時間：持續進行
-沒有Workspace → 3個月
-有Workspace → 3-6週"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498078">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📚 Phase 4｜策展出書">📚 Phase 4｜策展出書</textarea>
+      <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="沒有Workspace → 3個月
+有Workspace → 3-6週">沒有Workspace → 3個月
+有Workspace → 3-6週</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c13')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498078')">📝 編輯</button>
+        
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c13')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498078')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c14" data-base="peter" data-status="peter" style="left: 1464.72px; top: 1068.84px; width: 300px; z-index: 127;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c14','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c14','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c14','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c14','r')"></div>
+    </div></div><div class="card done" id="c1782985498079" data-base="done" data-status="done" style="left: 60px; top: 760px; width: 330px; z-index: 114;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498079','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498079','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498079','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498079','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c14')" title="折疊/展開">﹀</button>
-      <span class="card-badge">書稿結構</span>
-      
-      <button class="card-del" onclick="removeCard('c14')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498079')" title="折疊/展開">﹀</button>
+      <span class="card-badge">✅ Root</span>
+      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
+      <button class="card-del" onclick="removeCard('c1782985498079')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c14">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📐 書稿結構設計">📐 書稿結構設計</textarea>
-      </div>
-      <div class="card-content" id="cc-c14"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="請根據文章設計書稿：
-1. 幾章？每章主題？
-2. 每章對應哪些文章？
-3. 素材充足/不足？
-4. 閱讀順序和敘事主線？"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498079">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📁 Rose 根目錄（已建好）">📁 Rose 根目錄（已建好）</textarea>
+      <textarea class="card-body-el" rows="5" placeholder="輸入內容（/ 插入標題）" style="height: 96px;" data-val="Rose_Content/ ← 所有內容資產
+Rose_Business/ ← 商業行政
+Rose_Social/ ← 社群素材
+Rose_Admin/ ← 行政文件">Rose_Content/ ← 所有內容資產
+Rose_Business/ ← 商業行政
+Rose_Social/ ← 社群素材
+Rose_Admin/ ← 行政文件</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c14')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498079')">📝 編輯</button>
+        <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c14')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498079')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c15" data-base="peter" data-status="peter" style="left: 1769.24px; top: 1013.05px; width: 300px; z-index: 129;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c15','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c15','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c15','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c15','r')"></div>
+    </div></div><div class="card done" id="c1782985498080" data-base="done" data-status="done" style="left: 60px; top: 960px; width: 300px; z-index: 115;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498080','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498080','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498080','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498080','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c15')" title="折疊/展開">﹀</button>
-      <span class="card-badge">出版提案</span>
-      
-      <button class="card-del" onclick="removeCard('c15')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498080')" title="折疊/展開">﹀</button>
+      <span class="card-badge">✅ 課程</span>
+      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
+      <button class="card-del" onclick="removeCard('c1782985498080')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c15">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📝 出版提案書">📝 出版提案書</textarea>
-      </div>
-      <div class="card-content" id="cc-c15"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 96px;" data-val="1. 書名建議（3個選項）
-2. 一句話定位
-3. 目標讀者描述
-4. 為什麼現在需要這本書
-5. 章節大綱（每章50字）"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498080">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎓 課程">🎓 課程</textarea>
+      <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="兩條獨立產品線：
+• 天下線上課
+• 愛盟實體課">兩條獨立產品線：
+• 天下線上課
+• 愛盟實體課</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c15')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498080')">📝 編輯</button>
+        <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c15')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498080')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c16" data-base="peter" data-status="peter" style="left: 65.2584px; top: -390.859px; width: 330px; z-index: 200;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c16','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c16','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c16','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c16','r')"></div>
+    </div></div><div class="card done" id="c1782985498081" data-base="done" data-status="done" style="left: 440px; top: 960px; width: 300px; z-index: 116;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498081','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498081','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498081','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498081','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c16')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Phase 0</span>
-      
-      <button class="card-del" onclick="removeCard('c16')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498081')" title="折疊/展開">﹀</button>
+      <span class="card-badge">✅ Podcast</span>
+      <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))">✅ 已完成</span>
+      <button class="card-del" onclick="removeCard('c1782985498081')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c16">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🔑 Phase 0｜安裝 Claude Desktop">🔑 Phase 0｜安裝 Claude Desktop</textarea>
-      </div>
-      <div class="card-content" id="cc-c16"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 403px;" data-val="Step 1：申請帳號
-→ https://claude.ai 註冊
-→ Claude Pro ($20/月) 建議
-
-Step 2：下載 Claude Desktop
-→ https://claude.ai/download
-→ 選 macOS / Windows
-→ 安裝後登入帳號
-
-Step 3：啟用 Cowork 模式
-→ 左下角 Settings → Features
-→ 啟用「Cowork」研究預覽版
-→ 回主畫面切換到 Cowork 模式
-
-Step 4：選擇工作資料夾
-→ Cowork 詢問「選擇一個資料夾」
-→ 選/新建你的知識庫資料夾
-→ 例如：~/Documents/RoseLibrary/
-
-⚠️ 你選的資料夾 = AI的工作空間
-不選 = AI沒有檔案系統 = 只能聊天"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498081">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🎙 Podcast（已完成整理）">🎙 Podcast（已完成整理）</textarea>
+      <textarea class="card-body-el" rows="4" placeholder="輸入內容（/ 插入標題）" style="height: 77px;" data-val="20+ 集，每集三件套：
+整理版.md + 文字稿.docx + 音檔
+下一步：建素材卡（_card.md）">20+ 集，每集三件套：
+整理版.md + 文字稿.docx + 音檔
+下一步：建素材卡（_card.md）</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c16')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498081')">📝 編輯</button>
+        <span class="status-pill st-done" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">✅ 已完成</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c16')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498081')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c17" data-base="peter" data-status="peter" style="left: 781.558px; top: -616.101px; width: 330px; z-index: 203;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c17','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c17','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c17','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c17','r')"></div>
+    </div></div><div class="card wip" id="c1782985498082" data-base="wip" data-status="wip" style="left: 820px; top: 960px; width: 300px; z-index: 117;">
+    <div class="conn-port port-t" onmousedown="portDown(event,'c1782985498082','t')"></div>
+    <div class="conn-port port-b" onmousedown="portDown(event,'c1782985498082','b')"></div>
+    <div class="conn-port port-l" onmousedown="portDown(event,'c1782985498082','l')"></div>
+    <div class="conn-port port-r" onmousedown="portDown(event,'c1782985498082','r')"></div>
     <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c17')" title="折疊/展開">﹀</button>
-      <span class="card-badge">第一句話</span>
-      
-      <button class="card-del" onclick="removeCard('c17')">×</button>
+      <button class="card-collapse" onclick="toggleCollapse('c1782985498082')" title="折疊/展開">﹀</button>
+      <span class="card-badge">🔶 Youtube</span>
+      <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))">🔶 進行中</span>
+      <button class="card-del" onclick="removeCard('c1782985498082')">×</button>
     </div>
-    <div class="card-body-wrap" id="cbw-c17">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="🗣 你的第一句話 — 讓AI認識你">🗣 你的第一句話 — 讓AI認識你</textarea>
-      </div>
-      <div class="card-content" id="cc-c17"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 403px;" data-val="你好，我是 Rose，資深企業領導者。
-
-過去 20 多年，我累積了大量的文章和內容：
-- 媒體專欄（商業雜誌、網路媒體，約80+篇）
-- 演講稿（約50+場）
-- 專訪/報導（約40+篇）
-- 推薦序/書評（約15篇）
-- 社群貼文（約30+篇）
-
-我的核心主題包括：
-- 數位轉型與組織變革
-- 領導力與團隊管理
-- 職場女性與多元領導
-- 新創生態與投資思維
-
-我想把這些內容系統化整理，
-未來可以針對某個主題出書。
-
-請用繁體中文回覆。
-修改任何檔案前請先備份。
-每次工作結束前寫一份工作日誌。"></textarea></div>
+    <div class="card-body-wrap" id="cbw-c1782985498082">
+      <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="▶️ Youtube（整理中）">▶️ Youtube（整理中）</textarea>
+      <textarea class="card-body-el" rows="3" placeholder="輸入內容（/ 插入標題）" style="height: 58px;" data-val="歸檔補強中
+目標：對齊Podcast三件套格式">歸檔補強中
+目標：對齊Podcast三件套格式</textarea>
       <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c17')">📝 編輯</button>
+        <button class="edit-btn" onclick="openModal('c1782985498082')">📝 編輯</button>
+        <span class="status-pill st-wip" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">🔶 進行中</span>
       </div>
     </div>
-    <div class="rh" onmousedown="rhDown(event,'c17')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c19" data-base="peter" data-status="peter" style="left: -159.454px; top: 731.559px; width: 330px; z-index: 120;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c19','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c19','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c19','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c19','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c19')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Prompt範本</span>
-      
-      <button class="card-del" onclick="removeCard('c19')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c19">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💬 Phase 2 Prompt範本（處理一篇）">💬 Phase 2 Prompt範本（處理一篇）</textarea>
-      </div>
-      <div class="card-content" id="cc-c19"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 249px;" data-val="_inbox/ 裡有一個檔案：商周專訪_20200601.pdf
-這是商業周刊對我的專訪。請幫我：
-1. OCR 提取全文
-2. 辨識來源類型（專訪）
-3. 存到 C_Content/Interviews/
-4. 用正確的命名格式
-
-批量處理Prompt：
-我把一批檔案放到 _inbox/：
-- 3篇PDF（雜誌掃描）
-- 5篇Word文件（演講稿）
-- 2個截圖（Facebook長文）
-請幫我逐一處理，一次處理一篇。"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c19')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c19')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c20" data-base="peter" data-status="peter" style="left: 522.581px; top: 432.523px; width: 330px; z-index: 222;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c20','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c20','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c20','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c20','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c20')" title="折疊/展開">﹀</button>
-      <span class="card-badge">範例產出</span>
-      
-      <button class="card-del" onclick="removeCard('c20')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c20">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📄 內容卡片範例產出">📄 內容卡片範例產出</textarea>
-      </div>
-      <div class="card-content" id="cc-c20"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 365px;" data-val="基本資訊：COL-001
-標題：數位轉型的三個階段
-日期：2019-03-15
-來源：商業周刊 第1637期
-
-摘要：本文將數位轉型拆解為三個階段：
-(1)工具導入、(2)流程再造、(3)文化轉型。
-指出大多數企業卡在第一階段。
-
-主題標籤：#數位轉型 #組織變革
-
-關鍵觀點：
-1「轉型的終點不是技術，是文化」
-2「90%預算花第一階段，90%阻力來自第三階段」
-3「CIO = Chief Integration Officer」
-
-可出書素材：適合主題→數位轉型
-內容深度：★★★☆☆　獨特性：★★★★☆
-建議：可作為章節開場"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c20')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c20')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c21" data-base="peter" data-status="peter" style="left: 186.636px; top: 1196.65px; width: 330px; z-index: 121;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c21','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c21','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c21','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c21','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c21')" title="折疊/展開">﹀</button>
-      <span class="card-badge">Prompt範本</span>
-      
-      <button class="card-del" onclick="removeCard('c21')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c21">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="💬 Phase 3 主題分布分析">💬 Phase 3 主題分布分析</textarea>
-      </div>
-      <div class="card-content" id="cc-c21"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 269px;" data-val="請根據ContentIndex和內容卡片，
-幫我做「主題分布分析」：
-1. 我一共談了哪些主題？各幾篇？
-2. 每個主題的時間跨度（最早到最近）
-3. 哪些主題文章最多/哪些只有1-2篇？
-4. 用簡單表格呈現
-存為 _workspace/Rose_ThemeMap.md
-
-範例產出：
-數位轉型 | 42篇 | 2017-2025 | ★★★★★
-領導力 | 35篇 | 2015-2025 | ★★★★☆
-女性領導 | 18篇 | 2018-2024 | ★★★☆☆
-新創生態 | 12篇 | 2019-2023 | ★★☆☆☆
-AI應用 | 8篇 | 2023-2025 | ★★☆☆☆"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c21')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c21')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card peter" id="c22" data-base="peter" data-status="peter" style="left: 849.954px; top: 1035.84px; width: 330px; z-index: 124;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c22','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c22','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c22','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c22','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c22')" title="折疊/展開">﹀</button>
-      <span class="card-badge">書稿範例</span>
-      
-      <button class="card-del" onclick="removeCard('c22')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c22">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="📚 書稿結構範例（數位轉型主題）">📚 書稿結構範例（數位轉型主題）</textarea>
-      </div>
-      <div class="card-content" id="cc-c22"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 365px;" data-val="《數位轉型不是買系統》書稿 v1
-主線：「為什麼→怎麼→轉不動→轉完後」
-
-Ch1 數位轉型的真相與謊言
-[COL-001, COL-003, INT-001] ★★★★★素材充足
-
-Ch2 三階段框架：你卡在哪裡
-[COL-001, SPE-005, COL-022] ★★★★☆需補案例
-
-Ch3 人的問題比技術的問題大
-[SPE-001, COL-015, INT-003] ★★★★★素材充足
-
-Ch4 中小企業的轉型捷徑
-[COL-008, COL-012, SPE-008] ★★★☆☆需新寫
-
-Ch5 失敗的案例比成功的有用
-[COL-005, SPE-003] ★★☆☆☆需大量新寫
-
-Epilogue 寫給正在猶豫的你"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c22')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c22')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card todo" id="c1" data-base="todo" data-status="todo" style="left: 1979px; top: -630.123px; width: 260.697px; z-index: 218; height: 583.539px;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c1','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c1','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c1','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c1','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c1')" title="折疊/展開">﹀</button>
-      
-      <span class="status-pill st-todo" onclick="cycleStatus(this.closest('.card'))">⬜ 未開始</span>
-      <button class="card-del" onclick="removeCard('c1')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c1">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val="Rose TODO.md"></textarea>
-      </div>
-      <div class="card-content" id="cc-c1"><textarea class="card-body-el" rows="3" placeholder="內容（輸入 / 插入標題）" style="height: 192px;" data-val="## 當前狀態
-- 正在做：初始環境建置
-- 剛完成：CLAUDE.md v0
-- 下一步：收集第一批文章
-
-## 待辦清單
-- [ ] 把專欄文章 PDF 放入 _inbox
-- [ ] 把演講稿放入 _inbox
-- [ ] 建立 ContentIndex 內容總表
-- [ ] 第一批文章入庫（10 篇試跑）"></textarea></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c1')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c1')">
-      <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
-    </div></div><div class="card todo selected-card" id="c2" data-base="todo" data-status="todo" style="left: 2276.12px; top: -634.742px; width: 280px; z-index: 220;">
-    <div class="conn-port port-t" onmousedown="portDown(event,'c2','t')"></div>
-    <div class="conn-port port-b" onmousedown="portDown(event,'c2','b')"></div>
-    <div class="conn-port port-l" onmousedown="portDown(event,'c2','l')"></div>
-    <div class="conn-port port-r" onmousedown="portDown(event,'c2','r')"></div>
-    <div class="card-hdr">
-      <button class="card-collapse" onclick="toggleCollapse('c2')" title="折疊/展開">﹀</button>
-      
-      <span class="status-pill st-todo" onclick="cycleStatus(this.closest('.card'))">⬜ 未開始</span>
-      <button class="card-del" onclick="removeCard('c2')">×</button>
-    </div>
-    <div class="card-body-wrap" id="cbw-c2">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題" style="height: 18px;" data-val=""></textarea>
-      </div>
-      <div class="card-content" id="cc-c2"></div>
-      <div class="card-footer">
-        <button class="edit-btn" onclick="openModal('c2')">📝 編輯</button>
-      </div>
-    </div>
-    <div class="rh" onmousedown="rhDown(event,'c2')">
+    <div class="rh" onmousedown="rhDown(event,'c1782985498082')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"></path></svg>
     </div></div></div>
 </div>
@@ -1581,20 +738,11 @@ Epilogue 寫給正在猶豫的你"></textarea></div>
 <div id="ctx-menu" style="display: none;"></div>
 <div id="arrow-menu" style="display: none;"></div>
 
-<div id="ov" class="">
+<div id="ov">
   <div id="modal">
-    <h3 id="m-head">編輯：Rose TODO.md</h3>
+    <h3 id="m-head">編輯卡片</h3>
     <div class="mf"><label>標題</label><input type="text" id="m-title"></div>
-    <div class="mf"><label>內容</label><textarea id="m-body" rows="8" style="height: 186px; width: 455px;" data-val="## 當前狀態
-- 正在做：初始環境建置
-- 剛完成：CLAUDE.md v0
-- 下一步：收集第一批文章
-
-## 待辦清單
-- [ ] 把專欄文章 PDF 放入 _inbox
-- [ ] 把演講稿放入 _inbox
-- [ ] 建立 ContentIndex 內容總表
-- [ ] 第一批文章入庫（10 篇試跑）"></textarea></div>
+    <div class="mf"><label>內容</label><textarea id="m-body" rows="8" data-val=""></textarea></div>
     <div class="mf"><label>狀態</label>
       <select id="m-status">
         <option value="done">✅ 已完成</option>
@@ -1610,6 +758,7 @@ Epilogue 寫給正在猶豫的你"></textarea></div>
   </div>
 </div>
 
+<button id="home-btn" onclick="resetView()" title="回到白板中心" style="position:fixed;bottom:16px;right:16px;z-index:500;width:44px;height:44px;border-radius:50%;background:#1a2f5e;border:none;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;">⌖</button>
 <div id="legend">
   <h4>色碼說明</h4>
   <div class="leg-row"><div class="leg-dot" style="background:#eef2fb;border-color:#2a4080"></div>Peter架構</div>
@@ -1619,35 +768,70 @@ Epilogue 寫給正在猶豫的你"></textarea></div>
 </div>
 
 <script>
+// ══ CONFIG ══
+const REPO='Ghjasmine/jasmine', FILE='index.html';
+
 // ══ STATE ══
 let scale=.65,tx=80,ty=60;
 let isPanning=false,panSX=0,panSY=0,panTX=0,panTY=0;
 let dragging=null,dOffX=0,dOffY=0;
 let resizing=null,rX=0,rY=0,rW=0,rH=0;
 let ftResizing=null,ftRX=0,ftRY=0,ftRW=0,ftRH=0;
-let selMode=false,selActive=false,selSX=0,selSY=0;
+let selActive=false,selSX=0,selSY=0;
 let groupDragging=false,gdStartX=0,gdStartY=0,gdOrigins={};
 let selectedCards=new Set(),selectedLines=new Set();
-let connMode=true,connFrom=null;
-let zTop=100,cardSeq=0,lineSeq=0;
+let connMode=false,connFrom=null;
+let zTop=100,cardSeq=Date.now(),lineSeq=Date.now();
 let currentLineColor='#1a2f5e';
 let modalTarget=null;
-let slashTarget=null,slashStart=0;
+let slashTarget=null;
 let arrowMenuLineId=null;
 let boards=[{id:'peter',name:'Peter 系統架構'},{id:'rose',name:'Rose 工作板'}];
 let currentBoard='peter';
-const boardSnapshots={};
+// 單一快照系統
+const boardData={};
 const connections=[];
+// undo
+const undoStack=[];
 
 const VP=document.getElementById('vp');
 const world=document.getElementById('world');
-const linesEl=document.getElementById('lines');
+function getLinesEl(){return world.querySelector('#lines')||document.getElementById('lines');}
 
-// ══ ZOOM / PAN ══
-function applyT(){
-  world.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;
-  document.getElementById('zdsp').textContent=Math.round(scale*100)+'%';
+// ══ UNDO ══
+function pushUndo(){
+  const le=getLinesEl();
+  world.querySelectorAll('textarea').forEach(ta=>ta.setAttribute('data-val',ta.value));
+  undoStack.push({
+    html:world.innerHTML.replace(/<svg id="lines"[\s\S]*?<\/svg>/,''),
+    conns:JSON.parse(JSON.stringify(connections))
+  });
+  world.querySelectorAll('textarea[data-val]').forEach(ta=>ta.removeAttribute('data-val'));
+  if(undoStack.length>30)undoStack.shift();
 }
+function doUndo(){
+  if(!undoStack.length)return;
+  const snap=undoStack.pop();
+  world.innerHTML='<svg id="lines"><defs></defs></svg>';
+  world.insertAdjacentHTML('beforeend',snap.html);
+  connections.length=0;snap.conns.forEach(c=>connections.push(c));
+  restoreTextareas();
+  world.querySelectorAll('.card').forEach(el=>bindCardEvents(el,el.id));
+  drawLines();
+}
+
+// ══ TEXTAREA 值還原 ══
+function restoreTextareas(){
+  world.querySelectorAll('textarea[data-val]').forEach(ta=>{
+    ta.value=ta.getAttribute('data-val');
+    ta.removeAttribute('data-val');
+    ta.style.height='auto';
+    ta.style.height=ta.scrollHeight+'px';
+  });
+}
+
+// ══ ZOOM/PAN ══
+function applyT(){world.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;document.getElementById('zdsp').textContent=Math.round(scale*100)+'%';}
 function zoomIn(){zoomAt(VP.offsetWidth/2,VP.offsetHeight/2,1.2);}
 function zoomOut(){zoomAt(VP.offsetWidth/2,VP.offsetHeight/2,1/1.2);}
 function zoomAt(cx,cy,d){const ns=Math.max(.1,Math.min(4,scale*d));tx=cx-(cx-tx)*ns/scale;ty=cy-(cy-ty)*ns/scale;scale=ns;applyT();}
@@ -1656,11 +840,10 @@ VP.addEventListener('wheel',e=>{e.preventDefault();const r=VP.getBoundingClientR
 
 // ══ PAN ══
 VP.addEventListener('mousedown',e=>{
-  if(e.button===1||(e.button===0&&e.target===VP||e.target===world||e.target.tagName==='svg'||e.target.closest('#lines'))){
-    if(e.button===0&&connMode)return;
-    if(e.button===0&&e.target!==VP&&e.target!==world&&!e.target.closest('#lines'))return;
-    isPanning=true;panSX=e.clientX;panSY=e.clientY;panTX=tx;panTY=ty;VP.style.cursor='grabbing';
-  }
+  if(e.button!==0)return;
+  if(e.target!==VP&&e.target!==world&&!e.target.closest('#lines'))return;
+  if(connMode)return;
+  isPanning=true;panSX=e.clientX;panSY=e.clientY;panTX=tx;panTY=ty;VP.style.cursor='grabbing';
 });
 
 // ══ MOUSE MOVE ══
@@ -1670,24 +853,21 @@ document.addEventListener('mousemove',e=>{
     const r=VP.getBoundingClientRect();
     if(groupDragging){
       const dx=(e.clientX-gdStartX)/scale,dy=(e.clientY-gdStartY)/scale;
-      selectedCards.forEach(id=>{const el=document.getElementById(id);if(el&&gdOrigins[id]){el.style.left=(gdOrigins[id].x+dx)+'px';el.style.top=(gdOrigins[id].y+dy)+'px';}});
-    } else {
-      const wx=(e.clientX-r.left-tx)/scale,wy=(e.clientY-r.top-ty)/scale;
-      dragging.style.left=(wx-dOffX)+'px';dragging.style.top=(wy-dOffY)+'px';
+      selectedCards.forEach(id=>{const s=document.getElementById(id);if(s&&gdOrigins[id]){s.style.left=(gdOrigins[id].x+dx)+'px';s.style.top=(gdOrigins[id].y+dy)+'px';}});
+    }else{
+      dragging.style.left=((e.clientX-r.left-tx)/scale-dOffX)+'px';
+      dragging.style.top=((e.clientY-r.top-ty)/scale-dOffY)+'px';
     }
-    __drawLines();return;
+    drawLines();return;
   }
   if(resizing){
-    const dw=e.clientX-rX,dh=e.clientY-rY;
-    resizing.style.width=Math.max(160,rW+dw/scale)+'px';
-    if(dh>0)resizing.style.height=Math.max(80,rH+dh/scale)+'px';
+    resizing.style.width=Math.max(160,rW+(e.clientX-rX)/scale)+'px';
     resizing.querySelectorAll('textarea').forEach(ta=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
     return;
   }
   if(ftResizing){
-    const dw=e.clientX-ftRX,dh=e.clientY-ftRY;
     const ta=ftResizing.querySelector('textarea');
-    if(ta){ta.style.width=Math.max(60,ftRW+dw/scale)+'px';ta.style.height=Math.max(24,ftRH+dh/scale)+'px';}
+    if(ta){ta.style.width=Math.max(60,ftRW+(e.clientX-ftRX)/scale)+'px';ta.style.height=Math.max(24,ftRH+(e.clientY-ftRY)/scale)+'px';}
     return;
   }
   if(selActive){
@@ -1696,32 +876,31 @@ document.addEventListener('mousemove',e=>{
     const sb=document.getElementById('selbox');
     const x=Math.min(selSX,wx),y=Math.min(selSY,wy),w=Math.abs(wx-selSX),h=Math.abs(wy-selSY);
     sb.style.cssText=`display:block;left:${x}px;top:${y}px;width:${w}px;height:${h}px;`;
-    selectedCards.clear();
     world.querySelectorAll('.card').forEach(el=>{
-      const cl=parseFloat(el.style.left),ct=parseFloat(el.style.top),cw=el.offsetWidth,ch=el.offsetHeight;
-      if(cl+cw>x&&cl<x+w&&ct+ch>y&&ct<y+h){selectedCards.add(el.id);el.classList.add('selected-card');}
-      else el.classList.remove('selected-card');
+      const cl=parseFloat(el.style.left),ct=parseFloat(el.style.top);
+      if(cl+el.offsetWidth>x&&cl<x+w&&ct+el.offsetHeight>y&&ct<y+h){selectedCards.add(el.id);el.classList.add('selected-card');}
+      else{el.classList.remove('selected-card');selectedCards.delete(el.id);}
     });
   }
 });
-
 document.addEventListener('mouseup',e=>{
   if(isPanning){isPanning=false;VP.style.cursor='';}
-  if(dragging||groupDragging){dragging=null;groupDragging=false;__drawLines();}
+  if(dragging||groupDragging){dragging=null;groupDragging=false;drawLines();}
   if(resizing)resizing=null;
   if(ftResizing)ftResizing=null;
   if(selActive){selActive=false;document.getElementById('selbox').style.display='none';}
 });
 
-// ══ CARD ══
+// ══ CARD STATUS ══
 const ST={
   peter:{cls:'peter',stripe:'#2a4080',pill:''},
-  done:{cls:'done',stripe:'#1a7a4a',pill:'st-done',label:'✅ 已完成'},
-  wip:{cls:'wip',stripe:'#c05a10',pill:'st-wip',label:'🔶 進行中'},
-  todo:{cls:'todo',stripe:'#aaa',pill:'st-todo',label:'⬜ 未開始'},
+  done:{cls:'done',pill:'st-done',label:'✅ 已完成'},
+  wip:{cls:'wip',pill:'st-wip',label:'🔶 進行中'},
+  todo:{cls:'todo',pill:'st-todo',label:'⬜ 未開始'},
   header:{cls:'header',stripe:'#e8920a',pill:''}
 };
 
+// ══ MAKE CARD ══
 function makeCard(x,y,o){
   const id='c'+(++cardSeq);
   const base=o.base||'todo';
@@ -1746,71 +925,38 @@ function makeCard(x,y,o){
       <button class="card-del" onclick="removeCard('${id}')">×</button>
     </div>
     <div class="card-body-wrap" id="cbw-${id}">
-      <div style="padding:2px 0;">
-        <textarea class="card-title-el" rows="1" placeholder="標題">${esc(o.title||'')}</textarea>
-      </div>
-      <div class="card-content" id="cc-${id}"></div>
+      <textarea class="card-title-el" rows="1" placeholder="標題">${esc(o.title||'')}</textarea>
+      <textarea class="card-body-el" rows="${o.body?Math.min(12,(o.body.match(/\n/g)||[]).length+2):2}" placeholder="輸入內容（/ 插入標題）">${esc(o.body||'')}</textarea>
       <div class="card-footer">
         <button class="edit-btn" onclick="openModal('${id}')">📝 編輯</button>
+        ${showPill?`<span class="status-pill ${stCfg.pill||''}" onclick="cycleStatus(this.closest('.card'))" style="font-size:10px;">${stCfg.label||''}</span>`:''}
       </div>
     </div>
     <div class="rh" onmousedown="rhDown(event,'${id}')">
       <svg viewBox="0 0 12 12" fill="none" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"><path d="M10 2L2 10M10 6L6 10M10 10H6"/></svg>
     </div>`;
-  // 設初始內容
-  const cc=el.querySelector(`#cc-${id}`);
-  if(o.body){
-    const ta=document.createElement('textarea');
-    ta.className='card-body-el';ta.rows=3;ta.placeholder='內容（輸入 / 插入標題）';ta.value=o.body;
-    setupBodyTA(ta,id);
-    cc.appendChild(ta);
+  // 設定 textarea 事件
+  el.querySelectorAll('textarea').forEach(ta=>{
+    ta.addEventListener('mousedown',e=>e.stopPropagation());
+    ta.addEventListener('input',()=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
+  });
+  // slash menu on body textarea
+  const bodyTA=el.querySelector('.card-body-el');
+  if(bodyTA){
+    bodyTA.addEventListener('keydown',e=>{
+      if(e.key==='/'&&bodyTA.selectionStart===bodyTA.selectionEnd){
+        const val=bodyTA.value,pos=bodyTA.selectionStart;
+        if(pos===0||val[pos-1]==='\n'){slashTarget=bodyTA;showSlashMenu(e);e.preventDefault();}
+      }
+    });
   }
   bindCardEvents(el,id);
   world.appendChild(el);
-  setTimeout(()=>autoH(el),40);
+  setTimeout(()=>{el.querySelectorAll('textarea').forEach(ta=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});},40);
   return id;
 }
 
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-
-function autoH(el){
-  el.querySelectorAll('textarea').forEach(ta=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
-}
-
-function setupBodyTA(ta,id){
-  ta.addEventListener('mousedown',e=>e.stopPropagation());
-  ta.addEventListener('input',()=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
-  ta.addEventListener('keydown',e=>{
-    if(e.key==='/'&&ta.selectionStart===ta.selectionEnd){
-      const val=ta.value;const pos=ta.selectionStart;
-      if(pos===0||val[pos-1]==='\n'){
-        slashTarget=ta;slashStart=pos;
-        showSlashMenu(e);
-        e.preventDefault();
-      }
-    }
-  });
-}
-
-function showSlashMenu(e){
-  const m=document.getElementById('slash-menu');
-  m.style.left=e.clientX+'px';m.style.top=(e.clientY+4)+'px';m.style.display='block';
-}
-function hideSlashMenu(){document.getElementById('slash-menu').style.display='none';slashTarget=null;}
-
-function insertHeading(level){
-  if(!slashTarget)return;
-  hideSlashMenu();
-  const card=slashTarget.closest('.card');
-  if(!card)return;
-  const cc=card.querySelector('.card-content');
-  const ta=document.createElement('textarea');
-  ta.className=`h${level}-block`;ta.rows=1;ta.placeholder=`Heading ${level}`;
-  ta.addEventListener('mousedown',e=>e.stopPropagation());
-  ta.addEventListener('input',()=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
-  cc.appendChild(ta);
-  setTimeout(()=>{ta.focus();ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';},50);
-}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 function toggleCollapse(id){
   const wrap=document.getElementById('cbw-'+id);
@@ -1819,38 +965,40 @@ function toggleCollapse(id){
   const collapsed=wrap.style.display==='none';
   wrap.style.display=collapsed?'':'none';
   if(btn)btn.classList.toggle('collapsed',!collapsed);
-  __drawLines();
+  drawLines();
 }
-
 function cycleStatus(card){
   const s=card.dataset.status;
   const next={done:'wip',wip:'todo',todo:'done',peter:'peter',header:'header'};
-  const ns=next[s]||'todo';
-  applyStatus(card,ns);
+  applyStatus(card,next[s]||'todo');
 }
 function applyStatus(card,st){
   const cfg=ST[st]||ST.todo;
   card.dataset.status=st;
   card.className='card '+cfg.cls;
-  const pill=card.querySelector('.status-pill');
-  if(pill){pill.className='status-pill '+(cfg.pill||'');pill.textContent=cfg.label||'';}
+  card.querySelectorAll('.status-pill').forEach(p=>{p.className='status-pill '+(cfg.pill||'');p.textContent=cfg.label||'';});
 }
-
 function removeCard(id){
+  pushUndo();
   const el=document.getElementById(id);
-  if(el&&confirm('刪除這張卡片？')){
+  if(el){
     el.remove();
     connections.splice(0,connections.length,...connections.filter(c=>c.from!==id&&c.to!==id));
-    __drawLines();
+    drawLines();
   }
 }
-
 function rhDown(e,id){
   e.stopPropagation();const el=document.getElementById(id);
-  resizing=el;rX=e.clientX;rY=e.clientY;rW=el.offsetWidth;rH=el.offsetHeight;
+  resizing=el;rX=e.clientX;rY=e.clientY;rW=el.offsetWidth;
 }
-
 function bindCardEvents(el,id){
+  // 避免重複綁定
+  if(el._bound)return;el._bound=true;
+  el.querySelectorAll('textarea').forEach(ta=>{
+    if(ta._bound2)return;ta._bound2=true;
+    ta.addEventListener('mousedown',e=>e.stopPropagation());
+    ta.addEventListener('input',()=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
+  });
   el.addEventListener('mousedown',e=>{
     if(['TEXTAREA','BUTTON','INPUT','SELECT'].includes(e.target.tagName)||e.target.closest('.rh')||e.target.closest('.conn-port'))return;
     e.stopPropagation();el.style.zIndex=++zTop;
@@ -1858,7 +1006,7 @@ function bindCardEvents(el,id){
     if(selectedCards.has(id)&&selectedCards.size>1){
       groupDragging=true;gdStartX=e.clientX;gdStartY=e.clientY;gdOrigins={};
       selectedCards.forEach(sid=>{const s=document.getElementById(sid);if(s)gdOrigins[sid]={x:parseFloat(s.style.left),y:parseFloat(s.style.top)};});
-    } else {
+    }else{
       if(!e.shiftKey)clearSel();
       el.classList.add('selected-card');selectedCards.add(id);
       dragging=el;
@@ -1867,10 +1015,25 @@ function bindCardEvents(el,id){
       dOffY=(e.clientY-r.top-ty)/scale-parseFloat(el.style.top);
     }
   });
-  el.addEventListener('contextmenu',e=>{
-    e.preventDefault();e.stopPropagation();
-    showCardCtx(e,id);
-  });
+  el.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();showCardCtx(e,id);});
+  const rh=el.querySelector('.rh');
+  if(rh&&!rh._bound){rh._bound=true;rh.addEventListener('mousedown',e=>{e.stopPropagation();resizing=el;rX=e.clientX;rY=e.clientY;rW=el.offsetWidth;});}
+}
+
+// ══ SLASH MENU ══
+function showSlashMenu(e){const m=document.getElementById('slash-menu');m.style.left=e.clientX+'px';m.style.top=(e.clientY+4)+'px';m.style.display='block';}
+function hideSlashMenu(){document.getElementById('slash-menu').style.display='none';slashTarget=null;}
+function insertHeading(level){
+  if(!slashTarget)return;hideSlashMenu();
+  const cc=slashTarget.closest('.card')?.querySelector('.card-body-el');
+  if(!cc)return;
+  const styles={1:'font-size:20px;font-weight:800;color:#1a2f5e;',2:'font-size:16px;font-weight:700;color:#2a4080;',3:'font-size:13px;font-weight:700;color:#7a8aaa;'};
+  // 在 textarea 前面加上標題樣式標記
+  const prefix={1:'# ',2:'## ',3:'### '};
+  const pos=slashTarget.selectionStart;
+  const val=slashTarget.value;
+  slashTarget.value=val.slice(0,pos-0)+prefix[level]+val.slice(pos);
+  slashTarget.style.height='auto';slashTarget.style.height=slashTarget.scrollHeight+'px';
 }
 
 // ══ CONNECTION ══
@@ -1885,135 +1048,85 @@ function clickForConn(id){
   if(!connFrom){
     connFrom=id;
     const el=document.getElementById(id);if(el)el.classList.add('conn-source');
-    document.getElementById('conn-hint').textContent='再點第二張卡片完成連線';
-  } else {
+    document.getElementById('conn-hint').textContent='再點第二張卡片完成連線（ESC取消）';
+  }else{
     if(connFrom===id){clearConnHighlight();connFrom=null;document.getElementById('conn-hint').textContent='點第一張卡片';return;}
-    const id2='l'+(++lineSeq);
-    connections.push({id:id2,from:connFrom,to:id,color:currentLineColor,style:'arrow',width:2,dash:false,label:''});
+    connections.push({id:'l'+(++lineSeq),from:connFrom,to:id,color:currentLineColor,style:'arrow',width:2,dash:false,label:''});
     clearConnHighlight();connFrom=null;
     document.getElementById('conn-hint').textContent='點第一張卡片';
-    __drawLines();
+    drawLines();
   }
 }
-function clearConnHighlight(){
-  world.querySelectorAll('.conn-source').forEach(e=>e.classList.remove('conn-source'));
-}
-function portDown(e,id,port){
-  e.stopPropagation();e.preventDefault();
-  clickForConn(id);
-}
-
-function setLC(dot){
-  currentLineColor=dot.dataset.c;
-  document.querySelectorAll('.lc-dot').forEach(d=>d.classList.remove('active-lc'));
-  dot.classList.add('active-lc');
-}
-
-function deleteSelectedLines(){
-  selectedLines.forEach(id=>{
-    const i=connections.findIndex(c=>c.id===id);
-    if(i>-1)connections.splice(i,1);
-  });
-  selectedLines.clear();__drawLines();
-}
+function clearConnHighlight(){world.querySelectorAll('.conn-source').forEach(e=>e.classList.remove('conn-source'));}
+function portDown(e,id,port){e.stopPropagation();e.preventDefault();if(connMode)clickForConn(id);}
+function setLC(dot){currentLineColor=dot.dataset.c;document.querySelectorAll('.lc-dot').forEach(d=>d.classList.remove('active-lc'));dot.classList.add('active-lc');}
+function deleteSelectedLines(){selectedLines.forEach(id=>{const i=connections.findIndex(c=>c.id===id);if(i>-1)connections.splice(i,1);});selectedLines.clear();drawLines();}
 
 // ══ DRAW LINES ══
-function getCardCenter(id){
+function getCenter(id){const el=document.getElementById(id);if(!el)return null;return{x:parseFloat(el.style.left)+el.offsetWidth/2,y:parseFloat(el.style.top)+el.offsetHeight/2};}
+function getEdge(id,tx2,ty2){
   const el=document.getElementById(id);if(!el)return null;
-  return{x:parseFloat(el.style.left)+el.offsetWidth/2,y:parseFloat(el.style.top)+el.offsetHeight/2};
+  const cx=parseFloat(el.style.left)+el.offsetWidth/2,cy=parseFloat(el.style.top)+el.offsetHeight/2;
+  const dx=tx2-cx,dy=ty2-cy,w=el.offsetWidth/2,h=el.offsetHeight/2;
+  if(Math.abs(dx/w)>Math.abs(dy/h)){const sx=dx>0?1:-1;return{x:cx+sx*w,y:cy+dy*(sx*w/(dx||1))};}
+  else{const sy=dy>0?1:-1;return{x:cx+dx*(sy*h/(dy||1)),y:cy+sy*h};}
 }
-function getCardEdgePoint(id,tx2,ty2){
-  const el=document.getElementById(id);if(!el)return null;
-  const cx=parseFloat(el.style.left)+el.offsetWidth/2;
-  const cy=parseFloat(el.style.top)+el.offsetHeight/2;
-  const dx=tx2-cx,dy=ty2-cy;
-  const w=el.offsetWidth/2,h=el.offsetHeight/2;
-  if(Math.abs(dx/w)>Math.abs(dy/h)){
-    const sx=dx>0?1:-1;return{x:cx+sx*w,y:cy+dy*(sx*w/dx)};
-  } else {
-    const sy=dy>0?1:-1;return{x:cx+dx*(sy*h/dy),y:cy+sy*h};
-  }
-}
-
-function _drawLines(){
-  const defs=linesEl.querySelector('defs');
-  linesEl.innerHTML='';if(defs)linesEl.appendChild(defs);
+function drawLines(){
+  const le=getLinesEl();if(!le)return;
+  le.innerHTML='<defs></defs>';
   connections.forEach(c=>{
-    const fc=getCardCenter(c.from),tc=getCardCenter(c.to);
-    if(!fc||!tc)return;
-    const fp=getCardEdgePoint(c.from,tc.x,tc.y)||fc;
-    const tp=getCardEdgePoint(c.to,fc.x,fc.y)||tc;
+    const fc=getCenter(c.from),tc=getCenter(c.to);if(!fc||!tc)return;
+    const fp=getEdge(c.from,tc.x,tc.y)||fc;
+    const tp=getEdge(c.to,fc.x,fc.y)||tc;
     const color=c.color||'#1a2f5e';
-    const w=c.width||2;
-    const dash=c.dash?`stroke-dasharray="6 4"`:'';
-    const markId=`arrow-${color.replace('#','')}`;
-    if(!linesEl.querySelector(`#${markId}`)){
-      const defs2=linesEl.querySelector('defs')||linesEl.appendChild(document.createElementNS('http://www.w3.org/2000/svg','defs'));
+    const markId='mk'+color.replace(/[^a-z0-9]/gi,'');
+    const defs=le.querySelector('defs');
+    if(!le.querySelector('#'+markId)){
       const mk=document.createElementNS('http://www.w3.org/2000/svg','marker');
       mk.id=markId;mk.setAttribute('markerWidth','8');mk.setAttribute('markerHeight','6');
       mk.setAttribute('refX','8');mk.setAttribute('refY','3');mk.setAttribute('orient','auto');
       const poly=document.createElementNS('http://www.w3.org/2000/svg','polygon');
       poly.setAttribute('points','0 0, 8 3, 0 6');poly.setAttribute('fill',color);
-      mk.appendChild(poly);defs2.appendChild(mk);
+      mk.appendChild(poly);defs.appendChild(mk);
     }
-    const mx=(fp.x+tp.x)/2,my=(fp.y+tp.y)/2-40;
-    const pathD=`M${fp.x},${fp.y} Q${mx},${my} ${tp.x},${tp.y}`;
+    const mx=(fp.x+tp.x)/2,my=(fp.y+tp.y)/2-Math.min(80,Math.abs(tp.x-fp.x)*.3);
     const path=document.createElementNS('http://www.w3.org/2000/svg','path');
-    path.setAttribute('d',pathD);
-    path.setAttribute('stroke',color);path.setAttribute('stroke-width',w);
-    path.setAttribute('fill','none');if(c.dash)path.setAttribute('stroke-dasharray','6 4');
-    path.setAttribute('marker-end',c.style==='arrow'?`url(#${markId})`:'');
-    path.setAttribute('data-lid',c.id);path.style.cursor='pointer';
-    path.addEventListener('click',e=>{e.stopPropagation();selectedLines.add(c.id);});
-    path.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();showArrowMenu(e,c.id);});
-    linesEl.appendChild(path);
+    path.setAttribute('d',`M${fp.x},${fp.y} Q${mx},${my} ${tp.x},${tp.y}`);
+    path.setAttribute('stroke',color);path.setAttribute('stroke-width',c.width||2);
+    path.setAttribute('fill','none');
+    if(c.dash)path.setAttribute('stroke-dasharray','6 4');
+    path.setAttribute('marker-end',`url(#${markId})`);
+    if(c.double)path.setAttribute('marker-start',`url(#${markId})`);
+    path.style.cursor='pointer';path.dataset.lid=c.id;
+    path.addEventListener('click',ev=>{ev.stopPropagation();selectedLines.add(c.id);path.style.strokeWidth=(c.width||2)+2;});
+    path.addEventListener('contextmenu',ev=>{ev.preventDefault();ev.stopPropagation();showArrowMenu(ev,c.id);});
+    le.appendChild(path);
     if(c.label){
       const txt=document.createElementNS('http://www.w3.org/2000/svg','text');
-      txt.setAttribute('x',mx);txt.setAttribute('y',my-6);
-      txt.setAttribute('text-anchor','middle');txt.setAttribute('font-size','11');
-      txt.setAttribute('fill',color);txt.textContent=c.label;
-      linesEl.appendChild(txt);
+      txt.setAttribute('x',mx);txt.setAttribute('y',my-6);txt.setAttribute('text-anchor','middle');
+      txt.setAttribute('font-size','11');txt.setAttribute('fill',color);txt.textContent=c.label;le.appendChild(txt);
     }
   });
 }
 
-// ══ ARROW RIGHT-CLICK MENU ══
+// ══ ARROW MENU ══
 function showArrowMenu(e,lid){
   arrowMenuLineId=lid;
   const m=document.getElementById('arrow-menu');
   const c=connections.find(x=>x.id===lid);if(!c)return;
   m.innerHTML=`
-    <div class="arrow-item" onclick="arrowAddLabel()">✏️ 在連結上增添文字</div>
-    <div class="arrow-item">🎨 變更連結顏色
-      <input type="color" value="${c.color||'#1a2f5e'}" oninput="arrowColor(this.value)" style="width:24px;height:20px;margin-left:8px;vertical-align:middle;">
-    </div>
-    <div class="arrow-item" onclick="arrowToggleDouble()">↔ ${c.double?'改為單箭頭':'改為雙箭頭'}</div>
-    <div class="arrow-item" onclick="arrowToggleDash()">⊸ ${c.dash?'改為實線':'改為虛線'}</div>
-    <div class="arrow-item" onclick="arrowDelete()" style="color:#c00;">🗑 刪除此連結</div>
-  `;
+    <div class="arrow-item" onclick="arrowAddLabel()">✏️ 加文字</div>
+    <div class="arrow-item">🎨 改顏色 <input type="color" value="${c.color||'#1a2f5e'}" oninput="arrowColor(this.value)" style="width:24px;height:20px;margin-left:8px;vertical-align:middle;"></div>
+    <div class="arrow-item" onclick="arrowToggleDouble()">↔ ${c.double?'改單箭頭':'改雙箭頭'}</div>
+    <div class="arrow-item" onclick="arrowToggleDash()">⊸ ${c.dash?'改實線':'改虛線'}</div>
+    <div class="arrow-item" onclick="arrowDelete()" style="color:#c00;">🗑 刪除</div>`;
   m.style.left=e.clientX+'px';m.style.top=e.clientY+'px';m.style.display='block';
 }
-function arrowAddLabel(){
-  const c=connections.find(x=>x.id===arrowMenuLineId);if(!c)return;
-  const t=prompt('輸入連結文字：',c.label||'');
-  if(t!==null){c.label=t;__drawLines();}
-  hideArrowMenu();
-}
-function arrowColor(v){
-  const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.color=v;__drawLines();}
-}
-function arrowToggleDouble(){
-  const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.double=!c.double;c.style=c.double?'both':'arrow';__drawLines();}
-  hideArrowMenu();
-}
-function arrowToggleDash(){
-  const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.dash=!c.dash;__drawLines();}
-  hideArrowMenu();
-}
-function arrowDelete(){
-  const i=connections.findIndex(x=>x.id===arrowMenuLineId);
-  if(i>-1)connections.splice(i,1);__drawLines();hideArrowMenu();
-}
+function arrowAddLabel(){const c=connections.find(x=>x.id===arrowMenuLineId);if(!c)return;const t=prompt('輸入連結文字：',c.label||'');if(t!==null){c.label=t;drawLines();}hideArrowMenu();}
+function arrowColor(v){const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.color=v;drawLines();}}
+function arrowToggleDouble(){const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.double=!c.double;drawLines();}hideArrowMenu();}
+function arrowToggleDash(){const c=connections.find(x=>x.id===arrowMenuLineId);if(c){c.dash=!c.dash;drawLines();}hideArrowMenu();}
+function arrowDelete(){const i=connections.findIndex(x=>x.id===arrowMenuLineId);if(i>-1)connections.splice(i,1);drawLines();hideArrowMenu();}
 function hideArrowMenu(){document.getElementById('arrow-menu').style.display='none';arrowMenuLineId=null;}
 
 // ══ RIGHT-CLICK MENU ══
@@ -2022,35 +1135,31 @@ VP.addEventListener('contextmenu',e=>{
   e.preventDefault();
   if(e.target.closest('.card')||e.target.closest('#arrow-menu'))return;
   const r=VP.getBoundingClientRect();
-  ctxWX=(e.clientX-r.left-tx)/scale;
-  ctxWY=(e.clientY-r.top-ty)/scale;
+  ctxWX=(e.clientX-r.left-tx)/scale;ctxWY=(e.clientY-r.top-ty)/scale;
   const m=document.getElementById('ctx-menu');
   m.innerHTML=`
-    <div class="ctx-item" onclick="addCardAt(ctxWX,ctxWY);hideCtx()">📋 Note card</div>
-    <div class="ctx-item" onclick="addFreeTextAt(ctxWX,ctxWY);hideCtx()">T Text</div>
+    <div class="ctx-item" onclick="addCardAt(ctxWX,ctxWY);hideCtx()">📋 新增卡片</div>
+    <div class="ctx-item" onclick="addFreeTextAt(ctxWX,ctxWY);hideCtx()">T 新增文字</div>
     <div class="ctx-sep"></div>
     <div class="ctx-sub">整理選中卡片</div>
-    <div class="ctx-item" onclick="tidyUp('h');hideCtx()">Tidy up — 水平排列</div>
-    <div class="ctx-item" onclick="tidyUp('v');hideCtx()">Tidy up — 垂直排列</div>
-    <div class="ctx-item" onclick="tidyUp('g');hideCtx()">Tidy up — 格狀排列</div>
-  `;
+    <div class="ctx-item" onclick="tidyUp('h');hideCtx()">水平排列</div>
+    <div class="ctx-item" onclick="tidyUp('v');hideCtx()">垂直排列</div>
+    <div class="ctx-item" onclick="tidyUp('g');hideCtx()">格狀排列</div>`;
   m.style.left=e.clientX+'px';m.style.top=e.clientY+'px';m.style.display='block';
 });
 function hideCtx(){document.getElementById('ctx-menu').style.display='none';}
-
 function showCardCtx(e,id){
   const m=document.getElementById('ctx-menu');
   m.innerHTML=`
-    <div class="ctx-item" onclick="openModal('${id}');hideCtx()">📝 編輯卡片</div>
+    <div class="ctx-item" onclick="openModal('${id}');hideCtx()">📝 編輯</div>
     <div class="ctx-item" onclick="toggleCollapse('${id}');hideCtx()">﹀ 折疊/展開</div>
     <div class="ctx-sep"></div>
     <div class="ctx-sub">整理選中卡片</div>
-    <div class="ctx-item" onclick="tidyUp('h');hideCtx()">Tidy up — 水平排列</div>
-    <div class="ctx-item" onclick="tidyUp('v');hideCtx()">Tidy up — 垂直排列</div>
-    <div class="ctx-item" onclick="tidyUp('g');hideCtx()">Tidy up — 格狀排列</div>
+    <div class="ctx-item" onclick="tidyUp('h');hideCtx()">水平排列</div>
+    <div class="ctx-item" onclick="tidyUp('v');hideCtx()">垂直排列</div>
+    <div class="ctx-item" onclick="tidyUp('g');hideCtx()">格狀排列</div>
     <div class="ctx-sep"></div>
-    <div class="ctx-item" style="color:#c00;" onclick="removeCard('${id}');hideCtx()">🗑 刪除卡片</div>
-  `;
+    <div class="ctx-item" style="color:#c00;" onclick="removeCard('${id}');hideCtx()">🗑 刪除卡片</div>`;
   m.style.left=e.clientX+'px';m.style.top=e.clientY+'px';m.style.display='block';
 }
 
@@ -2064,12 +1173,12 @@ function tidyUp(dir){
     let x=Math.min(...els.map(e=>parseFloat(e.style.left)));
     els.sort((a,b)=>parseFloat(a.style.left)-parseFloat(b.style.left));
     els.forEach(el=>{el.style.left=x+'px';el.style.top=y0+'px';x+=el.offsetWidth/scale+GAP;});
-  } else if(dir==='v'){
+  }else if(dir==='v'){
     const x0=Math.min(...els.map(e=>parseFloat(e.style.left)));
     let y=Math.min(...els.map(e=>parseFloat(e.style.top)));
     els.sort((a,b)=>parseFloat(a.style.top)-parseFloat(b.style.top));
     els.forEach(el=>{el.style.left=x0+'px';el.style.top=y+'px';y+=el.offsetHeight/scale+GAP;});
-  } else {
+  }else{
     const cols=Math.ceil(Math.sqrt(els.length));
     const x0=Math.min(...els.map(e=>parseFloat(e.style.left)));
     const y0=Math.min(...els.map(e=>parseFloat(e.style.top)));
@@ -2077,82 +1186,65 @@ function tidyUp(dir){
     const H=Math.max(...els.map(e=>e.offsetHeight/scale));
     els.forEach((el,i)=>{el.style.left=(x0+(i%cols)*(W+GAP))+'px';el.style.top=(y0+Math.floor(i/cols)*(H+GAP))+'px';});
   }
-  __drawLines();
+  drawLines();
 }
 
-// ══ DOUBLE CLICK = NEW CARD ══
+// ══ DOUBLE CLICK ══
 VP.addEventListener('dblclick',e=>{
-  if(e.target.closest('.card')||e.target.closest('#arrow-menu')||e.target.closest('#ctx-menu'))return;
+  if(e.target.closest('.card')||e.target.closest('#ctx-menu'))return;
   const r=VP.getBoundingClientRect();
-  const wx=(e.clientX-r.left-tx)/scale-140;
-  const wy=(e.clientY-r.top-ty)/scale-60;
-  addCardAt(wx,wy);
+  addCardAt((e.clientX-r.left-tx)/scale-140,(e.clientY-r.top-ty)/scale-60);
 });
-
 function addCardAt(x,y){
-  const id=makeCard(x,y,{base:'todo',badge:'',title:'',body:''});
+  pushUndo();
+  const id=makeCard(x,y,{base:'todo',title:'',body:''});
   const el=document.getElementById(id);
-  if(el){setTimeout(()=>el.querySelector('.card-title-el')?.focus(),60);}
+  if(el)setTimeout(()=>el.querySelector('.card-title-el')?.focus(),60);
 }
 
 // ══ FREE TEXT ══
-function addFreeText(){
-  const r=VP.getBoundingClientRect();
-  addFreeTextAt((-tx+r.width/2)/scale-80,(-ty+r.height/2)/scale-20);
-}
+function addFreeText(){const r=VP.getBoundingClientRect();addFreeTextAt((-tx+r.width/2)/scale-80,(-ty+r.height/2)/scale-20);}
 function addFreeTextAt(x,y){
   const id='ft'+(++cardSeq);
   const color=document.getElementById('txt-color').value||'#1a2f5e';
-  const fontSize=document.getElementById('txt-size-sel')?document.getElementById('txt-size-sel').value:'18';
+  const size=document.getElementById('txt-size-sel')?.value||'18';
   const el=document.createElement('div');
   el.className='free-text';el.id=id;
   el.style.cssText=`left:${x}px;top:${y}px;z-index:${++zTop};position:absolute;`;
   // 控制列
   const ctrl=document.createElement('div');
-  ctrl.style.cssText='display:none;position:absolute;top:-28px;left:0;background:#fff;border:1px solid #dde3ef;border-radius:6px;padding:2px 6px;gap:4px;align-items:center;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1);';
-  ctrl.innerHTML=`
-    <input type="color" value="${color}" title="字色" style="width:20px;height:20px;padding:0;border:none;cursor:pointer;vertical-align:middle;" onchange="this.closest('.free-text').querySelector('textarea').style.color=this.value">
-    <select style="font-size:11px;border:1px solid #dde3ef;border-radius:4px;padding:1px 2px;" onchange="const ta=this.closest('.free-text').querySelector('textarea');ta.style.fontSize=this.value+'px';ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';">
-      <option value="12" ${fontSize=='12'?'selected':''}>S 12</option>
-      <option value="16" ${fontSize=='16'?'selected':''}>M 16</option>
-      <option value="20" ${fontSize=='20'?'selected':''}>L 20</option>
-      <option value="28" ${fontSize=='28'?'selected':''}>XL 28</option>
-      <option value="36" ${fontSize=='36'?'selected':''}>XXL 36</option>
+  ctrl.className='ft-ctrl';
+  ctrl.innerHTML=`<input type="color" value="${color}" title="字色" style="width:20px;height:20px;padding:0;border:none;cursor:pointer;" onchange="this.closest('.free-text').querySelector('textarea').style.color=this.value">
+    <select style="font-size:11px;border:1px solid #dde3ef;border-radius:4px;padding:1px 4px;" onchange="const ta=this.closest('.free-text').querySelector('textarea');ta.style.fontSize=this.value+'px';ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';">
+      <option value="12">S</option><option value="16">M</option><option value="20" selected>L</option><option value="28">XL</option><option value="36">XXL</option>
     </select>
-    <span style="cursor:pointer;color:#e05;font-size:14px;padding:0 2px;" onclick="this.closest('.free-text').remove()">×</span>
-  `;
-  ctrl.style.display='flex';
+    <span onclick="this.closest('.free-text').remove()" style="cursor:pointer;color:#e05;padding:0 4px;font-size:16px;">×</span>`;
   el.appendChild(ctrl);
   const ta=document.createElement('textarea');
-  ta.style.cssText=`color:${color};font-size:${fontSize}px;width:160px;min-height:36px;background:transparent;border:1px dashed transparent;outline:none;resize:none;font-family:inherit;line-height:1.5;padding:2px 4px;`;
+  ta.style.cssText=`color:${color};font-size:${size}px;width:160px;min-height:36px;background:transparent;border:1px dashed transparent;outline:none;resize:none;font-family:inherit;line-height:1.5;padding:2px 4px;display:block;`;
   ta.placeholder='輸入文字...';
   ta.addEventListener('mousedown',e=>e.stopPropagation());
-  ta.addEventListener('focus',()=>{ctrl.style.display='flex';ta.style.borderColor='#dde3ef';});
-  ta.addEventListener('blur',()=>{setTimeout(()=>{ta.style.borderColor='transparent';},200);});
+  ta.addEventListener('focus',()=>ta.style.borderColor='#dde3ef');
+  ta.addEventListener('blur',()=>ta.style.borderColor='transparent');
   ta.addEventListener('input',()=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
   el.appendChild(ta);
-  // resize handle
   const rh=document.createElement('div');
   rh.className='ft-resize';
   rh.innerHTML='<svg viewBox="0 0 10 10" width="10" height="10"><path d="M8 2L2 8M8 5L5 8M8 8H5" stroke="#aaa" stroke-width="1.5" fill="none"/></svg>';
   rh.addEventListener('mousedown',e=>{
-    e.stopPropagation();
-    ftResizing=el;ftRX=e.clientX;ftRY=e.clientY;
-    ftRW=parseFloat(ta.style.width)||ta.offsetWidth;
-    ftRH=parseFloat(ta.style.height)||ta.offsetHeight;
+    e.stopPropagation();ftResizing=el;ftRX=e.clientX;ftRY=e.clientY;
+    ftRW=parseFloat(ta.style.width)||ta.offsetWidth;ftRH=parseFloat(ta.style.height)||ta.offsetHeight;
   });
   el.appendChild(rh);
   el.addEventListener('mousedown',e=>{
-    if(e.target===ta||e.target.closest('select')||e.target.closest('input[type=color]')||e.target===rh||e.target.closest('.ft-resize'))return;
+    if(e.target===ta||e.target.closest('.ft-ctrl')||e.target===rh||e.target.closest('.ft-resize'))return;
     e.stopPropagation();el.style.zIndex=++zTop;
-    if(connMode){clickForConn(id);return;}
     dragging=el;
     const r=VP.getBoundingClientRect();
     dOffX=(e.clientX-r.left-tx)/scale-parseFloat(el.style.left);
     dOffY=(e.clientY-r.top-ty)/scale-parseFloat(el.style.top);
   });
-  world.appendChild(el);
-  setTimeout(()=>ta.focus(),50);
+  world.appendChild(el);setTimeout(()=>ta.focus(),50);
 }
 
 // ══ MODAL ══
@@ -2160,8 +1252,7 @@ function openModal(id){
   modalTarget=document.getElementById(id);if(!modalTarget)return;
   document.getElementById('m-head').textContent='編輯：'+(modalTarget.querySelector('.card-title-el')?.value||'卡片');
   document.getElementById('m-title').value=modalTarget.querySelector('.card-title-el')?.value||'';
-  const bodyTA=modalTarget.querySelector('.card-body-el');
-  document.getElementById('m-body').value=bodyTA?.value||'';
+  document.getElementById('m-body').value=modalTarget.querySelector('.card-body-el')?.value||'';
   document.getElementById('m-status').value=modalTarget.dataset.status||'todo';
   document.getElementById('ov').classList.add('on');
 }
@@ -2169,157 +1260,137 @@ function closeModal(){document.getElementById('ov').classList.remove('on');modal
 function saveModal(){
   if(!modalTarget)return;
   const tEl=modalTarget.querySelector('.card-title-el');
-  if(tEl)tEl.value=document.getElementById('m-title').value;
-  let bEl=modalTarget.querySelector('.card-body-el');
-  const cc=modalTarget.querySelector('.card-content');
-  if(!bEl&&cc){
-    bEl=document.createElement('textarea');
-    bEl.className='card-body-el';bEl.rows=3;bEl.placeholder='內容（輸入 / 插入標題）';
-    setupBodyTA(bEl,modalTarget.id);cc.appendChild(bEl);
-  }
-  if(bEl)bEl.value=document.getElementById('m-body').value;
+  if(tEl){tEl.value=document.getElementById('m-title').value;tEl.style.height='auto';tEl.style.height=tEl.scrollHeight+'px';}
+  const bEl=modalTarget.querySelector('.card-body-el');
+  if(bEl){bEl.value=document.getElementById('m-body').value;bEl.style.height='auto';bEl.style.height=bEl.scrollHeight+'px';}
   applyStatus(modalTarget,document.getElementById('m-status').value);
-  autoH(modalTarget);closeModal();
+  closeModal();
 }
 function deleteModalCard(){
   if(!modalTarget)return;
   if(confirm('刪除這張卡片？')){
+    pushUndo();
     const id=modalTarget.id;
     modalTarget.remove();
     connections.splice(0,connections.length,...connections.filter(c=>c.from!==id&&c.to!==id));
-    __drawLines();closeModal();
+    drawLines();closeModal();
   }
 }
 document.getElementById('ov').addEventListener('click',e=>{if(e.target===document.getElementById('ov'))closeModal();});
 
-// ══ CLEAR SEL ══
-function clearSel(){
-  selectedCards.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('selected-card');});
-  selectedCards.clear();
-}
-VP.addEventListener('click',e=>{
-  if(e.target===VP||e.target===world)clearSel();
-  hideCtx();hideArrowMenu();hideSlashMenu();
-});
+// ══ SEL / KEYBOARD ══
+function clearSel(){selectedCards.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('selected-card');});selectedCards.clear();}
+VP.addEventListener('click',e=>{if(e.target===VP||e.target===world)clearSel();hideCtx();hideArrowMenu();hideSlashMenu();});
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){hideCtx();hideArrowMenu();hideSlashMenu();clearSel();}
+  if(e.key==='Escape'){hideCtx();hideArrowMenu();hideSlashMenu();clearSel();if(connMode)toggleConnMode();}
+  if((e.key==='z'||e.key==='Z')&&(e.ctrlKey||e.metaKey)&&e.target===document.body){e.preventDefault();doUndo();}
   if((e.key==='Delete'||e.key==='Backspace')&&e.target===document.body){
-    selectedCards.forEach(id=>{
-      const el=document.getElementById(id);
-      if(el){el.remove();connections.splice(0,connections.length,...connections.filter(c=>c.from!==id&&c.to!==id));}
-    });
-    selectedCards.clear();__drawLines();
+    pushUndo();
+    selectedCards.forEach(id=>{const el=document.getElementById(id);if(el){el.remove();connections.splice(0,connections.length,...connections.filter(c=>c.from!==id&&c.to!==id));}});
+    selectedCards.clear();drawLines();
   }
 });
 
 // ══ BOARDS ══
-const boardData={};
-function saveBoardSnapshot(id){
-  // 先把所有 textarea value 寫進 data-val，讓 innerHTML 能抓到
-  world.querySelectorAll('textarea').forEach(ta=>{ta.setAttribute('data-val',ta.value);});
-  boardData[id]={html:world.innerHTML.replace(/<svg id="lines".*?<\/svg>/s,''),conns:JSON.parse(JSON.stringify(connections))};
+function saveBoardData(id){
+  world.querySelectorAll('textarea').forEach(ta=>ta.setAttribute('data-val',ta.value));
+  boardData[id]={
+    html:world.innerHTML.replace(/<svg id="lines"[\s\S]*?<\/svg>/,''),
+    conns:JSON.parse(JSON.stringify(connections))
+  };
+  world.querySelectorAll('textarea[data-val]').forEach(ta=>ta.removeAttribute('data-val'));
 }
-function restoreBoard(id){
-  const d=boardData[id];
+function loadBoardData(id){
   world.innerHTML='<svg id="lines"><defs></defs></svg>';
-  const linesNew=world.querySelector('#lines');
-  if(d){
-    world.insertAdjacentHTML('beforeend',d.html);
-    connections.length=0;d.conns.forEach(c=>connections.push(c));
-  }
-  // 還原 textarea value
-  world.querySelectorAll('textarea[data-val]').forEach(ta=>{
-    ta.value=ta.getAttribute('data-val');
-    ta.removeAttribute('data-val');
-    ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';
-  });
-  world.querySelectorAll('.card').forEach(el=>bindCardEvents(el,el.id));
-  const lOld=document.getElementById('lines');
-  if(lOld!==linesNew){linesEl2=linesNew;}
-}
-
-function switchBoard(id){
-  if(id===currentBoard)return;
-  saveBoardSnapshot(currentBoard);
-  saveLocalData();
-  currentBoard=id;renderTabs();
-  selectedCards.clear();selectedLines.clear();connFrom=null;
-  world.innerHTML='<svg id="lines"><defs></defs></svg>';
-  // reassign linesEl
-  window._linesEl=world.querySelector('#lines');
   connections.length=0;
   const d=boardData[id];
   if(d){
     world.insertAdjacentHTML('beforeend',d.html);
     d.conns.forEach(c=>connections.push(c));
-    // 還原 textarea value
-    world.querySelectorAll('textarea[data-val]').forEach(ta=>{
-      ta.value=ta.getAttribute('data-val');
-      ta.removeAttribute('data-val');
-      ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';
-    });
+    restoreTextareas();
     world.querySelectorAll('.card').forEach(el=>bindCardEvents(el,el.id));
-  } else {
+  }else{
     if(id==='peter')buildPeter();
     else buildRose();
   }
-  _drawLines();
+  drawLines();
+}
+function switchBoard(id){
+  if(id===currentBoard)return;
+  saveBoardData(currentBoard);
+  currentBoard=id;
+  renderTabs();
+  selectedCards.clear();selectedLines.clear();connFrom=null;
+  loadBoardData(id);
+  saveLocal();
 }
 
-// linesEl pointer — 需要在switchBoard後更新
-function __drawLines(){
-  const le=world.querySelector('#lines')||linesEl;
-  const defs=le.querySelector('defs');
-  le.innerHTML='';if(defs)le.appendChild(defs);
-  connections.forEach(c=>{
-    const fc=_getCenter(c.from),tc=_getCenter(c.to);if(!fc||!tc)return;
-    const fp=_getEdge(c.from,tc.x,tc.y)||fc;
-    const tp=_getEdge(c.to,fc.x,fc.y)||tc;
-    const color=c.color||'#1a2f5e';
-    const markId=`mk-${color.replace('#','')}`;
-    let defs2=le.querySelector('defs');if(!defs2){defs2=document.createElementNS('http://www.w3.org/2000/svg','defs');le.appendChild(defs2);}
-    if(!le.querySelector(`#${markId}`)){
-      const mk=document.createElementNS('http://www.w3.org/2000/svg','marker');
-      mk.id=markId;mk.setAttribute('markerWidth','8');mk.setAttribute('markerHeight','6');
-      mk.setAttribute('refX','8');mk.setAttribute('refY','3');mk.setAttribute('orient','auto');
-      const poly=document.createElementNS('http://www.w3.org/2000/svg','polygon');
-      poly.setAttribute('points','0 0, 8 3, 0 6');poly.setAttribute('fill',color);
-      mk.appendChild(poly);defs2.appendChild(mk);
-    }
-    const mx=(fp.x+tp.x)/2,my=(fp.y+tp.y)/2-Math.min(80,Math.abs(tp.x-fp.x)*0.3);
-    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
-    path.setAttribute('d',`M${fp.x},${fp.y} Q${mx},${my} ${tp.x},${tp.y}`);
-    path.setAttribute('stroke',color);path.setAttribute('stroke-width',c.width||2);
-    path.setAttribute('fill','none');
-    if(c.dash)path.setAttribute('stroke-dasharray','6 4');
-    path.setAttribute('marker-end',c.style!=='none'?`url(#${markId})`:'');
-    if(c.double)path.setAttribute('marker-start',`url(#${markId})`);
-    path.setAttribute('data-lid',c.id);path.style.cursor='pointer';
-    path.addEventListener('click',ev=>{ev.stopPropagation();selectedLines.add(c.id);});
-    path.addEventListener('contextmenu',ev=>{ev.preventDefault();ev.stopPropagation();showArrowMenu(ev,c.id);});
-    le.appendChild(path);
-    if(c.label){
-      const txt=document.createElementNS('http://www.w3.org/2000/svg','text');
-      txt.setAttribute('x',mx);txt.setAttribute('y',my-6);txt.setAttribute('text-anchor','middle');
-      txt.setAttribute('font-size','11');txt.setAttribute('fill',color);txt.textContent=c.label;le.appendChild(txt);
-    }
-  });
+// ══ PERSIST (localStorage) ══
+function saveLocal(){
+  saveBoardData(currentBoard);
+  try{
+    localStorage.setItem('wb_data',JSON.stringify(boardData));
+    localStorage.setItem('wb_boards',JSON.stringify(boards));
+    localStorage.setItem('wb_current',currentBoard);
+  }catch(e){console.log('saveLocal error',e);}
 }
-function _getCenter(id){const el=document.getElementById(id);if(!el)return null;return{x:parseFloat(el.style.left)+el.offsetWidth/2,y:parseFloat(el.style.top)+el.offsetHeight/2};}
-function _getEdge(id,tx2,ty2){
-  const el=document.getElementById(id);if(!el)return null;
-  const cx=parseFloat(el.style.left)+el.offsetWidth/2,cy=parseFloat(el.style.top)+el.offsetHeight/2;
-  const dx=tx2-cx,dy=ty2-cy,w=el.offsetWidth/2,h=el.offsetHeight/2;
-  if(Math.abs(dx/w)>Math.abs(dy/h)){const sx=dx>0?1:-1;return{x:cx+sx*w,y:cy+dy*(sx*w/(dx||1))};}
-  else{const sy=dy>0?1:-1;return{x:cx+dx*(sy*h/(dy||1)),y:cy+sy*h};}
+function loadLocal(){
+  try{
+    const b=localStorage.getItem('wb_boards');
+    if(b){const bp=JSON.parse(b);if(bp&&bp.length)boards=bp;}
+    const cur=localStorage.getItem('wb_current');
+    if(cur&&boards.find(x=>x.id===cur))currentBoard=cur;
+    const d=localStorage.getItem('wb_data');
+    if(d){Object.assign(boardData,JSON.parse(d));return true;}
+  }catch(e){console.log('loadLocal error',e);}
+  return false;
 }
-// drawLines delegates to _drawLines
 
+// ══ GITHUB SAVE ══
+async function saveToGitHub(){
+  saveLocal();
+  let tk=localStorage.getItem('gh_tk');
+  if(!tk){
+    tk=prompt('請輸入 GitHub Token（只需輸入一次）：');
+    if(!tk)return;
+    localStorage.setItem('gh_tk',tk);
+  }
+  const btn=document.querySelector('[onclick="saveToGitHub()"]');
+  const orig=btn.textContent;btn.textContent='⏳ 儲存中...';btn.disabled=true;
+  try{
+    // 先把 textarea value 寫進 data-val 再抓 outerHTML
+    document.querySelectorAll('textarea').forEach(ta=>ta.setAttribute('data-val',ta.value));
+    const mr=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(mr.status===401){localStorage.removeItem('gh_tk');throw new Error('Token 無效，請重新輸入');}
+    const meta=await mr.json();
+    const html=document.documentElement.outerHTML;
+    document.querySelectorAll('textarea[data-val]').forEach(ta=>ta.removeAttribute('data-val'));
+    const encoded=btoa(unescape(encodeURIComponent(html)));
+    const res=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
+      method:'PUT',
+      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'update '+new Date().toISOString().slice(0,16),content:encoded,sha:meta.sha})
+    });
+    btn.textContent=res.ok?'✅ 已儲存':'❌ 失敗';
+    if(!res.ok)throw new Error('API error '+res.status);
+  }catch(e){
+    btn.textContent='❌ 失敗';
+    document.querySelectorAll('textarea[data-val]').forEach(ta=>ta.removeAttribute('data-val'));
+    alert(e.message);
+  }
+  setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
+}
+
+// ══ TABS ══
 function renderTabs(){
   const el=document.getElementById('board-tabs');el.innerHTML='';
   boards.forEach(b=>{
     const t=document.createElement('div');t.className='btab'+(b.id===currentBoard?' active':'');
-    t.innerHTML=`<span class="btab-name" contenteditable="true" spellcheck="false" onblur="renameBoard('${b.id}',this.textContent.trim())" onclick="switchBoard('${b.id}')">${b.name}</span><span class="btab-del" onclick="deleteBoard('${b.id}')">×</span>`;
+    t.innerHTML=`<span class="btab-name" contenteditable="true" spellcheck="false"
+      onblur="renameBoard('${b.id}',this.textContent.trim())"
+      onclick="switchBoard('${b.id}')">${b.name}</span><span class="btab-del" onclick="deleteBoard('${b.id}')">×</span>`;
     el.appendChild(t);
   });
   const add=document.createElement('button');add.className='btab-add';add.textContent='＋';add.title='新增白板';
@@ -2330,92 +1401,14 @@ function renameBoard(id,name){const b=boards.find(x=>x.id===id);if(b&&name)b.nam
 function deleteBoard(id){
   if(boards.length<=1){alert('至少保留一個白板');return;}
   if(!confirm('刪除此白板？'))return;
+  delete boardData[id];
   boards=boards.filter(b=>b.id!==id);
-  if(currentBoard===id){currentBoard=boards[0].id;renderTabs();switchBoard(currentBoard);}
+  if(currentBoard===id){currentBoard=boards[0].id;renderTabs();loadBoardData(currentBoard);}
   else renderTabs();
 }
 
-// ══ GITHUB SYNC ══
-// 存卡片資料到 localStorage
-function saveLocalData(){
-  saveBoardSnapshot(currentBoard);
-  // 把每個 board 的卡片資料序列化
-  const allData={};
-  Object.keys(boardData).forEach(bid=>{
-    allData[bid]=boardData[bid];
-  });
-  allData[currentBoard]=boardData[currentBoard];
-  localStorage.setItem('wb_data', JSON.stringify(allData));
-  localStorage.setItem('wb_conns', JSON.stringify(connections));
-  localStorage.setItem('wb_boards', JSON.stringify(boards));
-}
-
-// 從 localStorage 還原
-function loadLocalData(){
-  try{
-    const saved=localStorage.getItem('wb_data');
-    const savedBoards=localStorage.getItem('wb_boards');
-    if(savedBoards){
-      const b=JSON.parse(savedBoards);
-      if(b&&b.length>0)boards=b;
-    }
-    if(saved){
-      const allData=JSON.parse(saved);
-      Object.keys(allData).forEach(bid=>{boardData[bid]=allData[bid];});
-      return true;
-    }
-  }catch(e){console.log('loadLocalData error',e);}
-  return false;
-}
-
-async function saveToGitHub(){
-  // 先存到本機
-  saveLocalData();
-  const REPO='Ghjasmine/jasmine',FILE='index.html';
-  let tk=localStorage.getItem('gh_tk');
-  if(!tk){
-    tk=prompt('請輸入 GitHub Token（只需輸入一次，會記在這台電腦）：');
-    if(!tk){alert('未輸入 Token，僅儲存到本機');return;}
-    localStorage.setItem('gh_tk',tk);
-  }
-  const btn=document.querySelector('[onclick="saveToGitHub()"]');
-  const orig=btn.textContent;
-  btn.textContent='⏳ 儲存中...';btn.disabled=true;
-  try{
-    // 把所有 textarea value 寫進 data-val
-    document.querySelectorAll('textarea').forEach(ta=>{ta.setAttribute('data-val',ta.value);});
-    const mr=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
-      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json'}
-    });
-    if(mr.status===401){
-      localStorage.removeItem('gh_tk');
-      throw new Error('Token 無效，請重新輸入');
-    }
-    const meta=await mr.json();
-    const html=document.documentElement.outerHTML;
-    // 還原 data-val（不讓 attribute 留在頁面上）
-    document.querySelectorAll('textarea[data-val]').forEach(ta=>{ta.removeAttribute('data-val');});
-    const encoded=btoa(unescape(encodeURIComponent(html)));
-    const res=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+FILE,{
-      method:'PUT',
-      headers:{'Authorization':'token '+tk,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
-      body:JSON.stringify({message:'update '+new Date().toISOString().slice(0,16),content:encoded,sha:meta.sha})
-    });
-    if(res.ok){
-      btn.textContent='✅ 已儲存';
-    } else {
-      throw new Error('GitHub API error '+res.status);
-    }
-  }catch(e){
-    btn.textContent='❌ 失敗';
-    alert(e.message);
-  }
-  setTimeout(()=>{btn.textContent=orig;btn.disabled=false;},2500);
-}
-
-// ══ BUILD PETER BOARD ══
+// ══ BUILD PETER ══
 function conn2(from,to,color){connections.push({id:'l'+(++lineSeq),from,to,color:color||'#2a4080',style:'arrow',width:2});}
-
 function buildPeter(){
   const C=380,W=300,WL=330;
   const PX={0:60,1:60+C,2:60+C*2,3:60+C*3};
@@ -2539,7 +1532,7 @@ function buildPeter(){
 '\n[COL-005, SPE-003] ★★☆☆☆需大量新寫' +
 '\n\nEpilogue 寫給正在猶豫的你'
   });conn2(P4,P4c);
-  _drawLines();
+  drawLines();
 }
 
 // ══ BUILD ROSE BOARD ══
@@ -2568,29 +1561,19 @@ function buildRose(){
   const RC_COURSE=makeCard(PX[0],960,{base:'done',badge:'✅ 課程',width:W,title:'🎓 課程',body:'兩條獨立產品線：\n• 天下線上課\n• 愛盟實體課'});conn2(RC,RC_COURSE,'#1a7a4a');
   const RC_POD=makeCard(PX[0]+C,960,{base:'done',badge:'✅ Podcast',width:W,title:'🎙 Podcast（已完成整理）',body:'20+ 集，每集三件套：\n整理版.md + 文字稿.docx + 音檔\n下一步：建素材卡（_card.md）'});conn2(RC,RC_POD,'#1a7a4a');
   const RC_YT=makeCard(PX[0]+C*2,960,{base:'wip',badge:'🔶 Youtube',width:W,title:'▶️ Youtube（整理中）',body:'歸檔補強中\n目標：對齊Podcast三件套格式'});conn2(RC,RC_YT,'#c05a10');
-  _drawLines();
+  drawLines();
 }
 
 // ══ INIT ══
 renderTabs();
-const _hasLocal=loadLocalData();
+const _hasLocal=loadLocal();
 if(_hasLocal && boardData[currentBoard]){
-  // 從 localStorage 還原
-  const d=boardData[currentBoard];
-  world.insertAdjacentHTML('beforeend',d.html);
-  d.conns.forEach(c=>connections.push(c));
-  world.querySelectorAll('textarea[data-val]').forEach(ta=>{
-    ta.value=ta.getAttribute('data-val');
-    ta.removeAttribute('data-val');
-    ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';
-  });
-  world.querySelectorAll('.card').forEach(el=>bindCardEvents(el,el.id));
-  renderTabs();
-} else {
+  loadBoardData(currentBoard);
+}else{
   buildPeter();
+  drawLines();
 }
 applyT();
-_drawLines();
 </script>
 
 </body></html>
